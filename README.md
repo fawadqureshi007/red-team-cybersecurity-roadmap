@@ -1,866 +1,1761 @@
-# 🔴 Red Team Cybersecurity Roadmap 2026
+# 🟥 Red Team Cybersecurity Roadmap 2026
+### From Fundamentals → Offensive Security → Red Team Tradecraft
 
-> **From zero → foundations → offensive security → real-world operator skills**
+> **A practical, research-driven roadmap for learning offensive security from the ground up.**
+>
+> The objective is not to collect tools or certificates. It is to understand systems well enough to reason about their attack surface, validate weaknesses in authorized environments, understand the defensive perspective, and communicate the result professionally.
 
-A practical cybersecurity roadmap built from my own research, study, testing, and red-team perspective.
-
-I collected material from many different sources, removed a lot of the noise, and organized the useful parts into a learning path that is easier to follow.
-
-**The goal isn't to collect tools. The goal is to build skills.**
-
-**Author:** **Fawad Qureshi**  
-**CEO & Founder — Codensec Security**  
-🌐 https://codensec.com
+**Author:** Fawad Qureshi  
+**Focus:** Red Team / Offensive Security  
+**Edition:** 2026  
+**Approach:** Fundamentals → Practical Labs → Specialization → Professional Tradecraft
 
 ---
 
-## 🧠 How To Use This Roadmap
+## 🧭 Before You Start
 
-Don't try to finish everything at once.
+## 🔗 How to Use the Resources
 
-For every topic:
+Every phase now has a compact **Learn → Practice → Reference → Optional Book/Certification** layer. Do not collect links for the sake of collecting them. Pick one primary learning resource, one hands-on environment, and one reference source; finish the phase checkpoint before moving forward.
 
-**Learn → Practice → Break → Investigate → Understand → Document → Repeat**
+> **Rule:** official documentation teaches the system, labs build the skill, GitHub references speed up research, and books provide depth. Use all four deliberately.
 
-Use the roadmap in order when you're starting out. Once you have the basics, jump deeper into the areas that match your goals.
 
-### 🎯 Each phase should answer 4 questions
+There are thousands of cybersecurity resources online. The difficult part is usually not finding another course or another tool; it is knowing **what to learn first, what can wait, and how the pieces connect**.
 
-| Question | What to look for |
-|---|---|
-| **What?** | The skill you need to learn |
-| **Why?** | Why it matters in security |
-| **How?** | Where and how to practice |
-| **Ready?** | What you should be able to do before moving on |
+This roadmap is organized around that problem.
 
-> 🔴 **Red Team Reality:** You do not become good at offensive security by memorizing tools. You become good by understanding systems, asking better questions, testing assumptions, and learning from what breaks.
-
----
-
-## 🧭 Roadmap Navigation
-
-1. [👤 Who This Roadmap Is For](#-who-this-roadmap-is-for)
-2. [🚀 Foundation](#-foundation)
-3. [🔎 Fundamentals](#-fundamentals)
-4. [💻 Programming & Scripting](#-programming--scripting)
-5. [🌐 Specialization Tracks](#-specialization-tracks)
-6. [🤖 Emerging Areas (2026 Focus)](#-emerging-areas-2026-focus)
-7. [🧪 Practical Experience & Labs](#-practical-experience--labs)
-8. [📚 Continuous Learning](#-continuous-learning)
-9. [📺 YouTube Channels](#-youtube-channels)
-10. [💼 Job Roles & Salaries](#-job-roles--salaries)
-11. [🔐 Improving Your Skills](#-improving-your-skills)
-12. [💼 Finding a Job](#-finding-a-job)
-13. [📜 Certifications](#-certifications)
-14. [📅 6-Month Roadmap](#-6-month-roadmap)
-15. [📈 Tips for Success](#-tips-for-success)
-16. [📚 Recommended Books](#-recommended-books)
-17. [🤝 Communities](#-communities)
-18. [❓ Frequently Asked Questions](#-frequently-asked-questions)
-19. [🤗 Contributing](#-contributing)
-
-## 🚀 Foundation
-
-Before you can defend systems, you need to understand how they work. These foundational skills — networking, operating systems, and core IT concepts — are non-negotiable. Hiring managers consistently cite weak fundamentals as the biggest gap in entry-level candidates.
-
-- ****Networking Basics**** 🌐 — how devices share data and connect through networks.
-
-  - [The Bits and Bytes of Computer Networking — Coursera (Google)](https\://www.coursera.org/learn/computer-networking)
-
-  - [Cisco Networking Academy (free courses)](https\://www.netacad.com/)
-
-  - [Professor Messer's free Network+ course (N10-009)](https\://www.professormesser.com/network-plus/n10-009/n10-009-video/n10-009-training-course/)
-
-- ****Operating System Fundamentals**** 🖥️ — how Windows and Linux internals work: process management, memory, permissions, the boot process.
-
-  - [Operating System Concepts — Coursera](https\://www.coursera.org/learn/os-pku)
-
-- ****Linux Essentials**** 🐧 — most security tools (and most servers) run on Linux. Command-line fluency is mandatory.
-
-  - [Linux Journey (free, interactive)](https\://linuxjourney.com/)
-
-  - [OverTheWire: Bandit (learn Linux through challenges)](https\://overthewire.org/wargames/bandit/)
-
-  - [Linux Essentials — LPI](https\://www.lpi.org/our-certifications/linux-essentials-overview/)
-
-- ****TCP/IP Networking**** 🌐 — the protocol stack the entire internet runs on.
-
-  - [Beej's Guide to Network Programming (free)](https\://beej.us/guide/bgnet/)
-
-  - [TCP/IP Networking — Pluralsight](https\://www.pluralsight.com/courses/tcp-ip-networking)
-
-- ****Introduction to Cybersecurity**** 🔒 — start with the **why** and the big picture.
-
-  - [ISC2 Certified in Cybersecurity (CC)](https\://www.isc2.org/certifications/cc) — vendor-neutral entry cert. ****Note:**** the free "One Million Certified in Cybersecurity" program closed to new enrollments on ****May 20, 2026****. The CC is now a standard paid exam (about ****$199 + $50 annual maintenance fee****), and a ****new exam outline takes effect September 1, 2026****.
-
-  - [Introduction to Cyber Security Specialization — Coursera](https\://www.coursera.org/specializations/intro-cyber-security)
-
-- ****CompTIA Network+**** 📜 — the industry-recognized credential validating your networking knowledge.
-
-  - [CompTIA Network+ official](https\://www.comptia.org/certifications/network)
-
-- ****Virtualization Basics**** 🌪️ — you'll spin up virtual labs constantly.
-
-  - [VirtualBox (free)](https\://www.virtualbox.org/)
-
-  - [VMware Workstation (now free for personal **and** commercial use)](https\://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)
-
-**---**
-
-**## 🔎 Phase 2 — Security Fundamentals & Attacker Thinking**
-
-With the basics in place, dive into core security concepts and the tools security teams use every day.
-
-- ****Security Fundamentals****
-
-  - [CompTIA Security+ — official](https\://www.comptia.org/certifications/security) — the current exam is ****SY0-701****. A successor (****SY0-801****, adding AI/LLM security content) is expected to preview in ****late 2026****; SY0-701 stays valid and fully recognized, so most people should still take it now.
-
-  - [Professor Messer's free Security+ training (SY0-701)](https\://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-training-course/)
-
-  - [Google Cybersecurity Professional Certificate — Coursera](https\://www.coursera.org/professional-certificates/google-cybersecurity)
-
-- ****The CIA Triad & Core Principles**** — Confidentiality, Integrity, Availability: the bedrock of every security decision.
-
-  - [NIST Cybersecurity Framework 2.0](https\://www.nist.gov/cyberframework)
-
-- ****Common Vulnerabilities**** ⚠️
-
-  - [OWASP Top 10 (web app risks)](https\://owasp.org/www-project-top-ten/)
-
-  - [OWASP API Security Top 10](https\://owasp.org/www-project-api-security/)
-
-  - [CWE Top 25 Most Dangerous Software Weaknesses](https\://cwe.mitre.org/top25/)
-
-- ****Threat Modeling & Attacker Mindset****
-
-  - [MITRE ATT&CK Framework](https\://attack.mitre.org/) — the standard map of how real attackers operate. Learn it cold.
-
-  - [MITRE D3FEND](https\://d3fend.mitre.org/) — the defensive-countermeasures companion to ATT&CK.
-
-  - [MITRE ATLAS](https\://atlas.mitre.org/) — the ATT&CK-style knowledge base for attacks on ****AI/ML systems**** (increasingly essential in 2026).
-
-- ****Cybersecurity Frameworks**** 📏
-
-  - [NIST Cybersecurity Framework 2.0](https\://www.nist.gov/cyberframework)
-
-  - [CIS Critical Security Controls](https\://www.cisecurity.org/controls)
-
-  - [ISO/IEC 27001](https\://www.iso.org/standard/27001)
-
-- ****Incident Response Fundamentals**** 🚨
-
-  - [NIST SP 800-61 Rev. 3 (April 2025) — Incident Response for Cybersecurity Risk Management](https\://csrc.nist.gov/pubs/sp/800/61/r3/final) — fully rewritten to align with CSF 2.0's six Functions (Govern, Identify, Protect, Detect, Respond, Recover). This supersedes Rev. 2.
-
-  - [SANS Reading Room — Incident Handling papers (free)](https\://www.sans.org/white-papers/)
-
-- ****Introduction to Malware Analysis**** 🦠
-
-  - [Malware Unicorn — Reverse Engineering 101](https\://malwareunicorn.org/workshops/re101.html)
-
-  - [ANY.RUN sandbox (analyze samples in-browser)](https\://any.run/)
-
-- ****Phishing & Social Engineering Awareness**** 📧
-
-  - [Social Engineering Framework — Security Through Education](https\://www.social-engineer.org/framework/general-discussion/)
-
-  - [PhishTank — known phishing sites](https\://phishtank.org/)
-
-- ****Cryptography Basics**** 🔐
-
-  - [Cryptopals Crypto Challenges (free, hands-on)](https\://cryptopals.com/)
-
-  - [Khan Academy: Journey into Cryptography](https\://www.khanacademy.org/computing/computer-science/cryptography)
-
-- ****Data Privacy & Compliance**** 🔒
-
-  - [GDPR overview](https\://gdpr.eu/what-is-gdpr/)
-
-  - [HIPAA basics](https\://www.hhs.gov/hipaa/for-professionals/index.html)
-
-  - [PCI DSS](https\://www.pcisecuritystandards.org/)
-
-**---**
-
-**## 💻 Phase 3 — Programming & Scripting for Operators**
-
-You don't need to be a software engineer, but you do need to read and write code. Automation, tooling, and analysis all live here.
-
-- ****Python**** 🐍 — the lingua franca of security tooling.
-
-  - [Automate the Boring Stuff with Python (free online)](https\://automatetheboringstuff.com/)
-
-  - [Python for Cybersecurity Specialization — Coursera](https\://www.coursera.org/specializations/pythonforcybersecurity)
-
-- ****Bash & Shell Scripting**** 🐚
-
-  - [The Bash Guide](https\://guide.bash.academy/)
-
-  - [ShellCheck (lint your scripts)](https\://www.shellcheck.net/)
-
-- ****PowerShell**** 💠 — essential for Windows / Active Directory work.
-
-  - [Microsoft PowerShell 101](https\://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction)
-
-- ****Understanding code you'll see in the wild****
-
-  - JavaScript (web exploitation, XSS)
-
-  - SQL (injection attacks, database hardening)
-
-  - C / C++ (memory corruption, deeper malware analysis)
-
-- ****Regular Expressions**** — [RegexOne (interactive)](https\://regexone.com/)
-
-**---**
-
-**## 🌐 Phase 4 — Offensive Security & Specialization Tracks**
-
-After fundamentals, pick a track. Specialists tend to out-earn generalists, and most 2026 roles expect depth, not just breadth. Below are the major tracks with the certifications that signal expertise in each.
-
-**### 1. Security Operations / SOC Analyst (Blue Team) 🛡️**
-
-****You'll do:**** monitor SIEM alerts, investigate incidents, respond to threats.
-
-- [CompTIA Security+](https\://www.comptia.org/certifications/security)
-
-- [CompTIA CySA+](https\://www.comptia.org/certifications/cybersecurity-analyst)
-
-- [Blue Team Level 1 (BTL1)](https\://www.securityblue.team/why-btl1)
-
-**### 2. Penetration Testing / Red Team 💻**
-
-****You'll do:**** simulate attacks to find weaknesses before real adversaries do.
-
-- [CompTIA PenTest+](https\://www.comptia.org/certifications/pentest)
-
-- [INE eJPT (great entry-level practical)](https\://security.ine.com/certifications/ejpt-certification/)
-
-- [Certified Ethical Hacker (CEH)](https\://www.eccouncil.org/programs/certified-ethical-hacker-ceh/)
-
-- [OffSec PEN-200 → OSCP / OSCP+](https\://www.offsec.com/courses/pen-200/) — the gold-standard hands-on cert. Since ****November 2024****, passing awards both the lifetime ****OSCP**** and the 3-year ****OSCP+****; the exam now includes a mandatory Active Directory "assumed compromise" set and no longer awards bonus points.
-
-**### 3. Incident Response & Digital Forensics 🔍**
-
-****You'll do:**** investigate breaches, recover evidence, write up what happened.
-
-- [GIAC Certified Incident Handler (GCIH)](https\://www.giac.org/certifications/certified-incident-handler-gcih/)
-
-- [GIAC Certified Forensic Analyst (GCFA)](https\://www.giac.org/certifications/certified-forensic-analyst-gcfa/)
-
-**### 4. Governance, Risk & Compliance (GRC) 📝**
-
-****You'll do:**** map controls to frameworks, manage audits, translate security to business.
-
-- [ISACA CISA — Certified Information Systems Auditor](https\://www.isaca.org/credentialing/cisa)
-
-- [ISACA CRISC — Risk and Information Systems Control](https\://www.isaca.org/credentialing/crisc)
-
-- [ISO/IEC 27001 Lead Auditor (PECB)](https\://www.pecb.com/en/education-and-certification-for-individuals/iso-iec-27001)
-
-**### 5. Security Architecture & Leadership 🏛️**
-
-****You'll do:**** design enterprise security, make build-vs-buy calls, run programs.
-
-- [ISC2 CISSP](https\://www.isc2.org/certifications/cissp)
-
-- [ISC2 CISSP-ISSAP (Architecture concentration)](https\://www.isc2.org/certifications/issap)
-
-- [ISACA CISM — Information Security Manager](https\://www.isaca.org/credentialing/cism)
-
-- [CompTIA SecurityX (the successor to CASP+)](https\://www.comptia.org/certifications/comptia-advanced-security-practitioner) — vendor-neutral advanced/architect-level cert. Existing CASP+ holders transition automatically, no retake required.
-
-**### 6. Cloud Security ☁️**
-
-The fastest-growing specialization. Almost every org runs hybrid/multi-cloud now.
-
-- [ISC2 CCSP](https\://www.isc2.org/certifications/ccsp)
-
-- [AWS Certified Security – Specialty](https\://aws.amazon.com/certification/certified-security-specialty/)
-
-- [Microsoft SC-100: Cybersecurity Architect Expert](https\://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/)
-
-- [Google Cloud Professional Cloud Security Engineer](https\://cloud.google.com/learn/certification/cloud-security-engineer)
-
-**### 7. Application Security (AppSec) / DevSecOps 📱**
-
-- [GIAC Web Application Penetration Tester (GWAPT)](https\://www.giac.org/certifications/web-application-penetration-tester-gwapt/)
-
-- [OffSec WEB-200 → OSWA](https\://www.offsec.com/courses/web-200/)
-
-- [Certified DevSecOps Professional (CDP)](https\://www.practical-devsecops.com/certified-devsecops-professional/)
-
-**### 8. Identity & Access Management (IAM) 🪪**
-
-Identity is the new perimeter in 2026 — and ****non-human / machine identity**** (service accounts, API keys, and AI agents) is now one of the fastest-growing attack surfaces.
-
-- [Microsoft SC-300: Identity and Access Administrator](https\://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/)
-
-- [Okta certifications](https\://www.okta.com/services/training/certification/)
-
-**### 9. AI Security 🧠 (new track)**
-
-Securing AI systems — and using AI safely inside security operations — is now its own career path.
-
-- [CompTIA SecAI+ (CY0-001)](https\://www.comptia.org/en-us/certifications/secai/) — launched ****February 17, 2026****, the first vendor-neutral certification focused on securing AI systems **and** leveraging AI in security operations. Recommended after Security+/CySA+/PenTest+.
-
-- Free foundations: [OWASP Top 10 for LLM Applications](https\://owasp.org/www-project-top-10-for-large-language-model-applications/), [MITRE ATLAS](https\://atlas.mitre.org/), and the [NIST AI Risk Management Framework](https\://www.nist.gov/itl/ai-risk-management-framework).
-
-**---**
-
-**## 🤖 Phase 5 — Modern Attack Surface: AI, Cloud, Identity & Zero Trust**
-
-These aren't fringe topics anymore — they appear in mainstream job descriptions. Building familiarity here will set you apart.
-
-- ****AI Security & Adversarial ML**** 🧠 — how attackers exploit AI systems (prompt injection, training-data poisoning, model extraction, jailbroken LLMs) and how defenders use AI for detection. In 2026, ****agentic AI**** — autonomous agents that reason, plan, and act — is being used on **both** sides: to automate parts of the attack kill chain, and to accelerate SOC triage and investigation. "Autonomous agent hijacking" is now a recognized attack category.
-
-  - [OWASP Top 10 for LLM Applications](https\://owasp.org/www-project-top-10-for-large-language-model-applications/)
-
-  - [MITRE ATLAS — adversarial threat landscape for AI systems](https\://atlas.mitre.org/)
-
-  - [NIST AI Risk Management Framework](https\://www.nist.gov/itl/ai-risk-management-framework)
-
-- ****Deepfakes & AI-Enabled Social Engineering**** 🎭 — voice- and video-cloning are now routinely used in fraud and business-email-compromise. The defensive shift is toward **contextual verification** (out-of-band callbacks, code words, verifying intent) rather than trying to spot fakes visually.
-
-- ****Non-Human Identity (NHI) & Machine Identity**** 🤖🪪 — service accounts, API keys, secrets, and AI-agent credentials now vastly outnumber human identities and are a top lateral-movement vector. Expect to see NHI governance in more job descriptions.
-
-- ****Zero Trust Architecture**** 🚧 — "never trust, always verify." The replacement for perimeter-based security, now extended to devices, workloads, APIs, and AI systems.
-
-  - [NIST SP 800-207 Zero Trust Architecture](https\://csrc.nist.gov/pubs/sp/800/207/final)
-
-  - [CISA Zero Trust Maturity Model](https\://www.cisa.gov/zero-trust-maturity-model)
-
-- ****Post-Quantum Cryptography (PQC)**** 🔮 — NIST finalized its first three quantum-resistant standards in ****August 2024****: ****ML-KEM (FIPS 203)**** for key exchange, ****ML-DSA (FIPS 204)**** and ****SLH-DSA (FIPS 205)**** for signatures. ****HQC**** was selected as a backup KEM in ****March 2025****, and a FALCON-based signature standard (****FIPS 206****) is in progress. "Harvest now, decrypt later" attacks make migration urgent.
-
-  - [NIST Post-Quantum Cryptography Project](https\://csrc.nist.gov/projects/post-quantum-cryptography)
-
-- ****Supply Chain & Software Bill of Materials (SBOM)****
-
-  - [CISA SBOM resources](https\://www.cisa.gov/sbom)
-
-  - [SLSA — Supply-chain Levels for Software Artifacts](https\://slsa.dev/)
-
-- ****Container & Kubernetes Security****
-
-  - [OWASP Kubernetes Security Cheat Sheet](https\://cheatsheetseries.owasp.org/cheatsheets/Kubernetes_Security_Cheat_Sheet.html)
-
-  - [CIS Kubernetes Benchmark](https\://www.cisecurity.org/benchmark/kubernetes)
-
-- ****OT / ICS Security**** ⚙️ — securing industrial control systems and critical infrastructure. A high-paying specialization with a large talent gap.
-
-  - [SANS Industrial Control Systems (ICS) training](https\://www.sans.org/industrial-control-systems-security/)
-
-**---**
-
-**## 🧪 Phase 6 — Labs, CTFs & Building Your Own Range**
-
-Certifications open doors; hands-on skills get you hired. Hiring managers consistently say practical experience matters more than credentials alone.
-
-- ****TryHackMe**** 🔐 — guided, beginner-friendly rooms — [tryhackme.com](https\://tryhackme.com/)
-
-- ****Hack The Box**** 🕵️ — more advanced, CTF-style — [hackthebox.com](https\://www.hackthebox.com/)
-
-- ****OverTheWire**** ⚔️ — classic wargames, great for Linux — [overthewire.org/wargames](https\://overthewire.org/wargames/)
-
-- ****VulnHub**** 🏴‍☠️ — downloadable vulnerable VMs — [vulnhub.com](https\://www.vulnhub.com/)
-
-- ****PortSwigger Web Security Academy**** 🌐 — best free web-app security training, by the makers of Burp Suite — [portswigger.net/web-security](https\://portswigger.net/web-security)
-
-- ****picoCTF**** 🚩 — free, beginner-friendly CTF platform — [picoctf.org](https\://picoctf.org/)
-
-- ****CTFtime**** 📅 — calendar of running CTF competitions worldwide — [ctftime.org](https\://ctftime.org/)
-
-- ****Blue Team Labs Online**** 🔵 — defender-focused challenges — [blueteamlabs.online](https\://blueteamlabs.online/)
-
-- ****LetsDefend**** — SOC analyst simulation — [letsdefend.io](https\://letsdefend.io/)
-
-- ****Proving Grounds (OffSec)**** — OSCP-like practice — [offsec.com/labs](https\://www.offsec.com/labs/individual/)
-
-- ****RangeForce**** — interactive defense labs — [rangeforce.com](https\://www.rangeforce.com/)
-
-**### 🟥 My Recommended Red-Team Workflow**
-
-For most practical engagements and labs, think in this order:
+The progression is intentional:
 
 ```text
-
-1. Scope & Authorization
-
-        ↓
-
-2. Reconnaissance
-
-        ↓
-
-3. Enumeration
-
-        ↓
-
-4. Attack-Surface Mapping
-
-        ↓
-
-5. Vulnerability Analysis
-
-        ↓
-
-6. Controlled Validation
-
-        ↓
-
-7. Privilege / Access Analysis
-
-        ↓
-
-8. Lateral-Movement Concepts
-
-        ↓
-
-9. Objective / Impact Validation
-
-        ↓
-
-10. Evidence Collection
-
-        ↓
-
-11. Reporting & Remediation
-
+Understand the technology
+        ↓
+Build and administer it
+        ↓
+Understand the security model
+        ↓
+Map the attack surface
+        ↓
+Validate weaknesses safely
+        ↓
+Understand privilege and identity
+        ↓
+Study enterprise environments
+        ↓
+Think in attack paths
+        ↓
+Understand detection
+        ↓
+Report professionally
+        ↓
+Specialize
 ```
 
-The exact workflow changes by engagement, but the principle stays the same: ****enumerate before exploiting, understand before automating, and document before moving on.****
+The further down the roadmap you go, the less useful memorization becomes. At the advanced stages, judgment, troubleshooting, documentation, and understanding relationships matter much more than knowing another command.
 
-**---**
+---
 
-**### Build a Home Lab**
+# 📚 Contents
 
-A home lab is one of the best portfolio builders. Common setups:
+| # | Section | # | Section |
+|---:|---|---:|---|
+| 01 | [Roadmap Philosophy](#-roadmap-philosophy) | 19 | [AI Security](#-phase-17--ai-security) |
+| 02 | [Who This Is For](#-who-this-is-for) | 20 | [Reporting](#-phase-18--reporting--professional-tradecraft) |
+| 03 | [Legal Boundaries](#-legal--ethical-boundaries) | 21 | [Lab Architecture](#-practical-lab-architecture) |
+| 04 | [Learning Model](#-the-learning-model) | 22 | [Platforms](#-recommended-learning-platforms) |
+| 05 | [Phase 0: IT](#-phase-0--computer--it-foundations) | 23 | [Tool Categories](#-tool-categories) |
+| 06 | [Phase 1: Networking](#-phase-1--networking) | 24 | [Certifications](#-certification-roadmap) |
+| 07 | [Phase 2: Linux](#-phase-2--linux) | 25 | [Portfolio](#-portfolio-roadmap) |
+| 08 | [Phase 3: Windows / AD](#-phase-3--windows--active-directory) | 26 | [Jobs](#-job-roles) |
+| 09 | [Phase 4: Security](#-phase-4--security-fundamentals) | 27 | [Salaries](#-salary-guide--2026) |
+| 10 | [Phase 5: Programming](#-phase-5--programming--scripting) | 28 | [6-Month Plan](#-6-month-roadmap) |
+| 11 | [Phase 6: Recon](#-phase-6--reconnaissance--enumeration) | 29 | [12-Month Plan](#-12-month-roadmap) |
+| 12 | [Phase 7: Web](#-phase-7--web-application-security) | 30 | [Weekly System](#-weekly-study-system) |
+| 13 | [Phase 8: Vulnerability Research](#-phase-8--vulnerability-research) | 31 | [Progress](#-measuring-progress) |
+| 14 | [Phase 9: Privilege](#-phase-9--privilege-escalation) | 32 | [Mistakes](#-common-mistakes) |
+| 15 | [Phase 10: AD Security](#-phase-10--active-directory-security) | 33 | [Interview](#-interview-preparation) |
+| 16 | [Phase 11: Internal Networks](#-phase-11--internal-network-security) | 34 | [Checklist](#-red-team-readiness-checklist) |
+| 17 | [Phase 12: Cloud](#-phase-12--cloud-security) | 35 | [Resources](#-core-resources) |
+| 18 | [Phase 13–16](#-phase-13--identity--access-security) | 36 | [FAQ / Final Advice](#-faq) |
 
-- ****Active Directory lab**** — a domain controller + a couple of Windows clients + a Kali attacker.
+---
 
-- ****Detection lab**** — the [DetectionLab project](https\://github.com/clong/DetectionLab) ships a pre-built Splunk + Velociraptor + Sysmon environment. (Check the repo's current status/notes before relying on it.)
+# 🎯 Roadmap Philosophy
 
-- ****SOC-in-a-box**** — [Security Onion](https\://securityonionsolutions.com/), the ELK/Elastic Stack, or [Wazuh](https\://wazuh.com/).
+This roadmap follows five rules.
 
-**---**
+| Rule | Meaning |
+|---|---|
+| **Fundamentals first** | Networking, operating systems, identity and programming are not optional background knowledge. |
+| **Practice every stage** | A topic should eventually become something you can reproduce in a legal lab. |
+| **Understand the mechanism** | Learn why a technique works instead of memorizing a command. |
+| **Think like both sides** | Understand what an attacker wants and what a defender can observe. |
+| **Document the work** | Notes, evidence and reports turn isolated practice into professional skill. |
 
-**## 🧠 Red-Team Skill Matrix**
+### The standard I recommend
 
-Use this as a self-assessment rather than a checklist of tools.
+> **Learn → Build → Enumerate → Analyze → Validate → Defend → Document**
 
-\| Area | Beginner | Intermediate | Advanced |
+If you cannot explain what happened, you probably do not understand it deeply enough yet.
 
-\|---|---|---|---|
+---
 
-\| Networking | TCP/IP, DNS, HTTP, ports | Routing, segmentation, packet analysis | Complex enterprise networks |
+# 👤 Who This Is For
 
-\| Linux | CLI, permissions, processes | Services, logs, scripting | Privilege/security internals |
+This roadmap is designed for:
 
-\| Windows | Users, services, PowerShell | AD basics, Kerberos, Windows internals | Enterprise identity attack paths |
+- complete beginners entering cybersecurity;
+- IT or networking learners moving into security;
+- aspiring penetration testers;
+- red-team learners;
+- SOC / blue-team analysts who want attacker perspective;
+- security students building a structured study plan;
+- practitioners who want to fill gaps in their fundamentals.
 
-\| Web | HTTP, cookies, auth | OWASP Top 10, Burp Suite | Complex application/API testing |
+It is **not** designed as a "learn hacking in 30 days" checklist.
 
-\| Recon | Asset discovery concepts | Enumeration and attack-surface mapping | Large-scope external recon |
+---
 
-\| Exploitation | Understand vulnerabilities | Reproduce vulnerabilities in labs | Chain weaknesses responsibly |
+# ⚠️ Legal & Ethical Boundaries
 
-\| Privilege Escalation | Basic concepts | Linux/Windows enumeration | Complex escalation paths |
+Use these skills only against:
 
-\| Active Directory | Domains/users/groups | Authentication and trust concepts | Attack-path analysis |
+- systems you own;
+- isolated personal labs;
+- CTFs;
+- intentionally vulnerable applications;
+- authorized penetration-testing environments;
+- bug-bounty targets that are explicitly in scope;
+- systems for which you have clear written permission.
 
-\| Cloud | IAM/storage/network basics | Cloud attack surfaces | Multi-account / hybrid environments |
+A professional assessment should have defined:
 
-\| Scripting | Python/Bash/PowerShell basics | Automation | Custom security tooling |
+| Engagement Item | Examples |
+|---|---|
+| Scope | Domains, IP ranges, applications, identities |
+| Time | Testing windows and maintenance periods |
+| Methods | Allowed and prohibited techniques |
+| Objectives | What the assessment is trying to demonstrate |
+| Safety | Rate limits, production restrictions, stop conditions |
+| Evidence | What may be collected and how it is stored |
+| Communication | Primary and emergency contacts |
 
-\| Reporting | Clear notes | Professional findings | Executive + technical reporting |
+> **Authorization is part of the technical skill.**
 
-\| OPSEC | Understand exposure | Reduce unnecessary noise | Engagement-aware operational discipline |
+---
 
-> ****Important:**** A tool-heavy skillset without fundamentals is fragile. My priority is understanding the system first and the tool second.
+# 🧠 The Learning Model
 
-**---**
+Don't treat the roadmap as a list where you simply tick boxes.
 
-**## 📚 Continuous Learning**
+Use each phase at three levels:
 
-Cybersecurity changes faster than any other IT discipline. Staying current is part of the job.
+### Level 1 — Understand
 
-- ****The Hacker News**** 👨‍💻 — [thehackernews.com](https\://thehackernews.com/)
+Can you explain the concept?
 
-- ****BleepingComputer**** 💻 — [bleepingcomputer.com](https\://www.bleepingcomputer.com/)
+### Level 2 — Reproduce
 
-- ****Krebs on Security**** 🔍 — [krebsonsecurity.com](https\://krebsonsecurity.com/)
+Can you build or reproduce it in a controlled environment?
 
-- ****Dark Reading**** 📰 — [darkreading.com](https\://www.darkreading.com/)
+### Level 3 — Reason
 
-- ****CyberScoop**** 🌐 — [cyberscoop.com](https\://cyberscoop.com/)
+Can you troubleshoot an unfamiliar example and explain the security implications?
 
-- ****Risky Business**** 🎙️ (podcast) — [risky.biz](https\://risky.biz/)
+The third level is where the real progress happens.
 
-- ****TLDR Sec**** 📩 (newsletter) — [tldrsec.com](https\://tldrsec.com/)
+---
 
-- ****SANS Internet Storm Center**** 🌪️ — [isc.sans.edu](https\://isc.sans.edu/)
+# 💻 Phase 0 — Computer & IT Foundations
 
-- ****CISA Advisories**** 🚨 — [cisa.gov/news-events/cybersecurity-advisories](https\://www.cisa.gov/news-events/cybersecurity-advisories)
+Before testing a system, understand what the system is doing.
 
-- ****Schneier on Security**** 🔐 — [schneier.com](https\://www.schneier.com/)
+| Area | Learn | Target Understanding |
+|---|---|---|
+| Hardware | CPU · RAM · storage · peripherals | How hardware supports software execution |
+| OS | Kernel · user space · processes · threads | How an OS manages programs |
+| Filesystems | Paths · permissions · metadata · mounts | How data and access are organized |
+| Processes | PID · parent/child · services · resources | How applications run |
+| Virtualization | VM · snapshot · virtual network · NAT | How to build isolated labs |
+| Administration | Users · groups · services · updates | How systems are normally operated |
 
-**### Reddit Communities**
+### Foundation checkpoint
 
-[r/cybersecurity](https\://www.reddit.com/r/cybersecurity/) · [r/netsec](https\://www.reddit.com/r/netsec/) · [r/AskNetsec](https\://www.reddit.com/r/AskNetsec/) · [r/blueteamsec](https\://www.reddit.com/r/blueteamsec/) · [r/redteamsec](https\://www.reddit.com/r/redteamsec/)
+You should be able to explain:
 
-**### People to Follow**
+```text
+Program
+  ↓
+Process
+  ↓
+Memory + permissions
+  ↓
+Operating-system services
+  ↓
+Network / filesystem interaction
+```
 
-Brian Krebs · Bruce Schneier · SwiftOnSecurity · Marcus Hutchins (MalwareTech) · Katie Nickels (threat intel) · John Hammond.
+---
 
-**---**
+### 📚 Learn & Practice Resources
 
-**## 📺 YouTube Channels**
+| Type | Resource | Why it belongs here |
+|---|---|---|
+| Learn | [Professor Messer A+](https://www.professormesser.com/) | Hardware, operating systems and troubleshooting fundamentals |
+| Learn | [Linux Journey](https://linuxjourney.com/) | Beginner-friendly operating-system and command-line concepts |
+| Practice | [OverTheWire](https://overthewire.org/wargames/) | Start applying command-line and system concepts through guided challenges |
+| Lab | [VirtualBox](https://www.virtualbox.org/) | Build isolated virtual machines and snapshots for practice |
+| Reference | [The Linux Command Line](https://nostarch.com/tlcl3) | Strong long-form reference for terminal and system fundamentals |
 
-- [John Hammond](https\://www.youtube.com/@_JohnHammond) — CTFs, malware analysis, practical projects
+**Suggested checkpoint:** do not move on because you can follow a tutorial. Move on when you can build a small VM lab, explain processes/filesystems/permissions, and troubleshoot basic system problems yourself.
 
-- [NetworkChuck](https\://www.youtube.com/@NetworkChuck) — networking, Linux, cloud, fun and accessible
 
-- [Professor Messer](https\://www.youtube.com/@professormesser) — complete free CompTIA training
+# 🌐 Phase 1 — Networking
 
-- [The Cyber Mentor (TCM Security)](https\://www.youtube.com/@TCMSecurityAcademy) — ethical hacking and pentesting
+Networking is one of the highest-value foundations in offensive security.
 
-- [IppSec](https\://www.youtube.com/@ippsec) — Hack The Box walkthroughs (gold standard)
+| Domain | Topics | What You Should Be Able to Explain |
+|---|---|---|
+| Addressing | IPv4 · IPv6 · CIDR · subnetting | How hosts and networks are addressed |
+| Link layer | Ethernet · ARP | How local devices communicate |
+| IP | Routing · gateways · ICMP | How traffic moves between networks |
+| Transport | TCP · UDP · ports · sockets | How applications communicate |
+| DNS | A · AAAA · CNAME · MX · TXT · NS | How names become infrastructure |
+| DHCP | Leases · scopes · options | How hosts receive configuration |
+| Web | HTTP · HTTPS · TLS | How browser/server communication works |
+| Network design | NAT · VLANs · segmentation · firewalls | How environments are separated |
+| Analysis | Packets · connections · captures | How to investigate traffic |
 
-- [LiveOverflow](https\://www.youtube.com/@LiveOverflow) — deep technical hacking content
+### Practice target
 
-- [HackerSploit](https\://www.youtube.com/@HackerSploit) — penetration testing tutorials
+Build an isolated network containing:
 
-- [David Bombal](https\://www.youtube.com/@davidbombal) — networking, security, career advice
+```text
+        Lab Network
+             │
+     ┌───────┼────────┐
+     │       │        │
+   Linux   Windows   Web App
+```
 
-- [Hak5](https\://www.youtube.com/@hak5) — hacking gear and techniques
+Then identify the addressing, routes, services and traffic yourself.
 
-- [STÖK](https\://www.youtube.com/@STOKfredrik) — bug bounty hunting
+### Useful resources
 
-- [InsiderPhD](https\://www.youtube.com/@InsiderPhD) — bug bounty and API security
+- Cisco Networking Academy
+- Professor Messer Network+
+- Beej's Guide to Network Programming
 
-- [LowLevelLearning](https\://www.youtube.com/@LowLevelLearning) — low-level systems and security
+---
 
-**---**
+### 📚 Learn & Practice Resources
 
-**## 💼 Job Roles & Salaries**
+| Type | Resource | Best use |
+|---|---|---|
+| Learn | [Cisco Networking Academy](https://www.netacad.com/) | Networking fundamentals, packet flow and network configuration |
+| Learn | [Professor Messer Network+](https://www.professormesser.com/network-plus/n10-009/n10-009-training-course/) | Structured Network+ study |
+| Reference | [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/) | Sockets and practical network programming |
+| GitHub | [Awesome Networking](https://github.com/facyber/awesome-networking) | Curated networking references, tools and labs |
+| Practice | [Wireshark](https://www.wireshark.org/docs/) | Learn by inspecting real packet captures |
+| Book | [Computer Networking: A Top-Down Approach](https://www.pearson.com/en-us/subject-catalog/p/computer-networking-a-top-down-approach/P200000003302) | Deeper networking theory without losing the practical perspective |
 
-The ranges below are ****2025–2026 estimates**** and vary widely by experience, location, industry, and certifications. Always cross-check with current sources before making decisions.
+**Lab idea:** capture DNS, TCP handshake, HTTP and TLS traffic in your own lab and explain each packet rather than memorizing port numbers.
 
-\| Job Role                  | Avg. Salary (PHP) | Avg. Salary (USD)  | Avg. Salary (AUD) |
 
-\|---------------------------|-------------------|--------------------|-------------------|
+# 🐧 Phase 2 — Linux
 
-\| SOC Analyst (Tier 1)      | ₱600,000          | $55,000–$75,000    | AU$70,000         |
+Linux should become a working environment, not just a machine where you run security tools.
 
-\| Security Analyst          | ₱850,000          | $75,000–$95,000    | AU$95,000         |
+| Area | Commands / Topics | Goal |
+|---|---|---|
+| Navigation | `pwd` · `ls` · `cd` | Understand paths and directories |
+| Files | `cat` · `less` · `head` · `tail` | Inspect data efficiently |
+| Search | `grep` · `find` | Locate files and information |
+| Text | `sort` · `uniq` · `cut` · `awk` · `sed` | Process command output |
+| Shell | Pipes · redirection · variables | Combine commands logically |
+| Remote access | `ssh` | Understand remote administration |
+| Web / transfer | `curl` · `wget` | Work with network resources |
+| Permissions | Users · groups · ownership · mode bits | Understand access control |
+| Processes | PID · services · signals | Understand running software |
+| Networking | Interfaces · routes · sockets | Understand Linux networking |
+| Administration | Packages · logs · services · scheduled tasks | Operate a Linux host |
 
-\| Network Security Engineer | ₱1,200,000        | $95,000–$120,000   | AU$110,000        |
+### Linux mindset
 
-\| Penetration Tester        | ₱1,100,000        | $90,000–$130,000   | AU$115,000        |
+For any file, process or service, ask:
 
-\| Incident Responder        | ₱1,300,000        | $100,000–$140,000  | AU$125,000        |
+> Who owns it?  
+> Who can access it?  
+> What runs it?  
+> What does it communicate with?  
+> What evidence does it leave?
 
-\| Forensic Analyst          | ₱1,150,000        | $85,000–$115,000   | AU$105,000        |
+---
 
-\| Malware Analyst           | ₱1,400,000        | $100,000–$140,000  | AU$120,000        |
+### 📚 Learn & Practice Resources
 
-\| Cloud Security Engineer   | ₱1,500,000        | $120,000–$160,000  | AU$140,000        |
+| Type | Resource | Best use |
+|---|---|---|
+| Learn | [Linux Journey](https://linuxjourney.com/) | Linux concepts from beginner level |
+| Practice | [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) | Command line, permissions, files, SSH and problem solving |
+| Reference | [Linux man-pages](https://man7.org/linux/man-pages/) | Primary reference for commands and system interfaces |
+| GitHub | [Awesome Linux](https://github.com/aleksandar-todorovic/awesome-linux) | Curated Linux learning and tooling |
+| Book | [The Linux Command Line](https://nostarch.com/tlcl3) | Shell, scripting and command-line fluency |
+| Reference | [GTFOBins](https://gtfobins.github.io/) | Understand how Unix binaries can become security-relevant primitives in authorized labs |
 
-\| AI Security Engineer      | ₱1,600,000        | $130,000–$180,000  | AU$150,000        |
+**Practice rule:** learn commands in context. For example, understand what permissions, processes, pipes, services and sockets mean before turning them into pentesting checklists.
 
-\| Security Consultant       | ₱1,600,000        | $110,000–$160,000  | AU$130,000        |
 
-\| GRC Analyst               | ₱1,000,000        | $85,000–$115,000   | AU$105,000        |
+# 🪟 Phase 3 — Windows & Active Directory
 
-\| Security Architect        | ₱2,200,000        | $140,000–$200,000  | AU$170,000        |
+Windows becomes especially important when you move into enterprise security.
 
-\| CISO                      | ₱4,000,000+       | $200,000–$400,000+ | AU$250,000+       |
+## Windows foundations
 
-**### Verify current numbers here**
+| Area | Learn |
+|---|---|
+| Administration | Users · groups · services · scheduled tasks |
+| PowerShell | Objects · pipeline · filtering · scripting |
+| Security | Permissions · tokens · privileges |
+| System | Registry · processes · drivers |
+| Telemetry | Event Logs · auditing |
+| Networking | SMB · DNS · remote administration concepts |
 
-- ****Philippines:**** [JobStreet](https\://www.jobstreet.com.ph/), [PayScale Philippines](https\://www.payscale.com/research/PH/Country=Philippines/Salary), [Kalibrr](https\://www.kalibrr.com/)
+---
 
-- ****United States:**** [BLS Occupational Outlook Handbook](https\://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm), [Glassdoor](https\://www.glassdoor.com/), [Levels.fyi](https\://www.levels.fyi/)
+## 🏢 Active Directory Foundations
 
-- ****Australia:**** [SEEK Salary Guide](https\://www.seek.com.au/career-advice/page/salary-guide), [Hays Salary Guide](https\://www.hays.com.au/salary-guide)
+Learn the architecture before studying AD attack paths.
 
-> ****Market note (2026):**** the global cybersecurity workforce gap remains large (commonly cited around ****4+ million**** unfilled roles), and ****AI-security**** roles are among the fastest-growing. Demand is strong, but entry-level competition has tightened — hands-on skills and a visible portfolio matter more than ever.
+| Component | Understand |
+|---|---|
+| Domain | Central identity and administration boundary |
+| Domain Controller | Core directory/authentication role |
+| Users | Identity objects |
+| Groups | Permission and access organization |
+| OU | Administrative organization |
+| GPO | Centralized configuration |
+| LDAP | Directory communication concepts |
+| Kerberos | Enterprise authentication concepts |
+| NTLM | Legacy authentication concepts |
+| DNS | AD dependency and name resolution |
+| Trusts | Relationships between domains/forests |
+| ACLs | Permissions and object access |
+| Service accounts | Non-human identities |
 
-**---**
+### Core idea
 
-**## 🔐 Improving Your Skills**
+> **AD security is largely identity + permissions + trust relationships.**
 
-1. ****Practice secure online behavior**** 🕵️
+---
 
-   - Use unique passwords with a password manager (Bitwarden, 1Password).
+### 📚 Learn & Practice Resources
 
-   - Enable multi-factor authentication everywhere — prefer hardware keys (YubiKey) or passkeys over SMS.
+| Type | Resource | Best use |
+|---|---|---|
+| Learn | [Microsoft Learn — Windows](https://learn.microsoft.com/windows/) | Windows administration and internals foundations |
+| Learn | [Microsoft Learn — Active Directory Domain Services](https://learn.microsoft.com/windows-server/identity/ad-ds/) | Domain, authentication, policy and directory concepts |
+| Lab | [GOAD](https://github.com/Orange-Cyberdefense/GOAD) | Vulnerable Active Directory environment for authorized practice |
+| GitHub | [Commando VM](https://github.com/mandiant/commando-vm) | Windows-based offensive-security lab/tool environment |
+| Reference | [AD Security](https://adsecurity.org/) | Active Directory security research and concepts |
+| Book | [Windows Internals / Sysinternals](https://learn.microsoft.com/en-us/sysinternals/resources/windows-internals) | Use Sysinternals plus Windows internals material to understand what Windows is actually doing |
 
-   - Be cautious about oversharing personal info online.
+**Lab goal:** build or use an isolated domain and learn to explain users, groups, OUs, GPOs, Kerberos, NTLM, LDAP, DNS and ACLs before studying attack paths.
 
-2. ****Keep everything updated**** 🔄 — auto-update your OS, browser, and apps; subscribe to vendor security advisories for tools you rely on.
 
-3. ****Secure your home network**** 🛡️ — use WPA3 where possible, change default router credentials, segment IoT devices onto a guest network, and consider pfSense/OPNsense for serious labs.
+# 🔐 Phase 4 — Security Fundamentals
 
-4. ****Educate yourself daily**** 📚 — 15 minutes of news plus one TryHackMe room a day adds up fast.
+| Area | Core Concepts |
+|---|---|
+| CIA | Confidentiality · Integrity · Availability |
+| Identity | Authentication · Authorization · Accounting |
+| Risk | Threat · vulnerability · likelihood · impact |
+| Crypto | Hashing · encryption · signatures · certificates · TLS |
+| Vulnerabilities | Injection · access control · disclosure · misconfiguration |
+| Security controls | Preventive · detective · corrective |
+| Monitoring | Logging · alerting · telemetry |
+| Response | Identification · containment · eradication · recovery |
 
-5. ****Use security tools**** 🔧 — a VPN on untrusted networks, reputable EDR/antivirus, a password manager (mandatory), and DNS filtering (NextDNS, Cloudflare 1.1.1.1 for Families).
+### Frameworks to understand
 
-6. ****Practice hands-on**** 💻 — CTFs, home labs, write-ups. Document everything on GitHub — your portfolio is your proof.
+| Framework | Why Learn It |
+|---|---|
+| NIST CSF | Organizing cybersecurity risk |
+| CIS Controls | Prioritized security controls |
+| MITRE ATT&CK | Adversary behavior and techniques |
+| MITRE D3FEND | Defensive countermeasures |
+| MITRE ATLAS | AI threat behavior |
+| OWASP | Application security |
 
-7. ****Join communities**** 🌐 — Discord servers, Reddit, local DEF CON groups, OWASP and ISC2 chapters.
+---
 
-8. ****Self-audit regularly**** 🔍 — review your digital footprint quarterly and run [Have I Been Pwned](https\://haveibeenpwned.com/) checks.
+### 📚 Learn & Practice Resources
 
-**---**
+| Type | Resource | Best use |
+|---|---|---|
+| Framework | [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) | Understand security outcomes and risk thinking |
+| Framework | [CIS Controls](https://www.cisecurity.org/controls) | Practical defensive controls and priorities |
+| Threat model | [MITRE ATT&CK](https://attack.mitre.org/) | Map attacker behavior to techniques and defensive visibility |
+| Learn | [ISC2 Certified in Cybersecurity](https://www.isc2.org/certifications/cc) | Entry-level security foundation and certification path |
+| Learn | [CompTIA Security+](https://www.comptia.org/certifications/security) | Broad security fundamentals and terminology |
+| Practice | [picoCTF](https://picoctf.org/) | Beginner-friendly security problem solving |
 
-**## 💼 Finding a Job**
+**Certification note:** CC is designed for newcomers with no work experience; Security+ is a broader baseline. Neither replaces hands-on labs.
 
-**### 1. Build your portfolio**
 
-A resume tells; a portfolio shows. At minimum: a clean GitHub with lab and CTF write-ups, a technical blog (Medium, Hashnode, or self-hosted), and documented home-lab projects.
+# 🐍 Phase 5 — Programming & Scripting
 
-**### 2. Tailor your resume**
+You do not need to become a software engineer.
 
-Use keywords from the job description (ATS systems screen aggressively), quantify wins ("reduced false-positive alerts by 30%"), and put relevant certs up top.
+You do need to read, modify and write enough code to automate work and understand applications.
 
-**### 3. Apply broadly — especially to adjacent roles**
+| Language | Priority | Security Use |
+|---|---:|---|
+| Python | ⭐⭐⭐⭐⭐ | Automation · APIs · analysis · tooling |
+| Bash | ⭐⭐⭐⭐ | Linux automation |
+| PowerShell | ⭐⭐⭐⭐⭐ | Windows administration and automation |
+| SQL | ⭐⭐⭐⭐ | Databases and application security |
+| JavaScript | ⭐⭐⭐⭐ | Web applications and browser behavior |
+| C/C++ | ⭐⭐⭐ | Memory and binary fundamentals |
 
-You won't land Senior Pentester first. Realistic entry points: SOC Analyst Tier 1, Junior Security Analyst, IT Support → Security pivot, Help Desk → SOC pivot, GRC Analyst (often an easier entry for non-tech backgrounds), and internships/apprenticeships.
+### Python progression
 
-**### 4. Job boards**
+```text
+Syntax
+ → Functions
+ → Files
+ → JSON
+ → Exceptions
+ → HTTP
+ → Sockets
+ → Regex
+ → APIs
+ → Automation
+```
 
-[LinkedIn](https\://www.linkedin.com/) · [Indeed](https\://www.indeed.com/) · [Glassdoor](https\://www.glassdoor.com/) · [CyberSecJobs](https\://www.cybersecjobs.com/) · [InfoSec Jobs](https\://infosec-jobs.com/) · [JobStreet (PH/SEA)](https\://www.jobstreet.com/) · [Kalibrr (PH)](https\://www.kalibrr.com/) · [Wellfound (startups)](https\://wellfound.com/)
+The objective is not to collect scripts. It is to understand and build them.
 
-**### 5. Network intentionally**
+---
 
-Attend conferences (DEF CON, BSides, RSA, ROOTCON in PH), local meetups, and OWASP chapter events. On LinkedIn, comment thoughtfully — don't just spam connections.
+### 📚 Learn & Practice Resources
 
-**### 6. Prepare for interviews**
+| Type | Resource | Best use |
+|---|---|---|
+| Learn | [Python Official Tutorial](https://docs.python.org/3/tutorial/) | Python syntax, data structures and standard library |
+| Learn | [Automate the Boring Stuff](https://automatetheboringstuff.com/) | Practical Python automation |
+| Practice | [pwn.college](https://pwn.college/) | Hands-on programming, exploitation and systems challenges |
+| GitHub | [Awesome Python](https://github.com/vinta/awesome-python) | Find useful Python libraries and learning references |
+| Book | [Black Hat Python](https://nostarch.com/black-hat-python2e) | Security-oriented Python projects and automation |
+| Learn | [Bash Reference Manual](https://www.gnu.org/software/bash/manual/) | Shell scripting and automation |
 
-Common technical topics: networking (OSI/TCP), the cyber kill chain, MITRE ATT&CK, common attacks (XSS, SQLi, phishing), and IR basics. Behavioral: "tell me about a time you handled a difficult problem." Practical: many companies use scenario-based interviews or take-home labs.
+**Project target:** write small utilities that parse scan output, query an API, process logs, manipulate files and automate repetitive lab work.
 
-**### 7. Stay persistent**
 
-Track applications in a spreadsheet, ask for feedback on rejections, and keep learning while you apply.
+# 🔎 Phase 6 — Reconnaissance & Enumeration
 
-**---**
+Recon is the process of building an accurate picture of an authorized environment.
 
-**## 📜 Certifications**
+| Stage | Questions |
+|---|---|
+| Discovery | What assets exist? |
+| Identification | What are these assets? |
+| Services | What is exposed? |
+| Technology | What software/frameworks are involved? |
+| Configuration | How are they configured? |
+| Identity | What authentication exists? |
+| Relationships | How do systems trust each other? |
+| Validation | Which observations deserve deeper testing? |
 
-Certifications build credibility, validate knowledge, and unlock job filters — but they don't replace experience. Be strategic about which ones you pursue.
+### Keep structured notes
 
-**### Entry-Level (start here)**
+```text
+Asset
+├── Hostname
+├── Address
+├── Service
+├── Technology
+├── Version
+├── Authentication
+├── Interesting behavior
+├── Evidence
+└── Follow-up question
+```
 
-- ****CompTIA Security+ (SY0-701)**** — [comptia.org/certifications/security](https\://www.comptia.org/certifications/security)
+> **Enumeration is where curiosity becomes methodology.**
 
-  Appears in a large share of entry-level postings and satisfies the DoD 8140 baseline. The most universally useful first cert. (Successor ****SY0-801**** with AI content is expected to preview in late 2026; a current Security+ stays valid for three years regardless of version.)
+---
 
-- ****Google Cybersecurity Professional Certificate**** — [Coursera](https\://www.coursera.org/professional-certificates/google-cybersecurity)
+### 📚 Learn & Practice Resources
 
-  Great for career switchers; budget-friendly with hands-on labs.
+| Type | Resource | Best use |
+|---|---|---|
+| Methodology | [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/) | Structured web reconnaissance/testing methodology |
+| Reference | [Nmap Documentation](https://nmap.org/book/) | Service discovery and network enumeration theory |
+| GitHub | [ProjectDiscovery](https://github.com/projectdiscovery) | Modern open-source recon and asset-discovery tooling |
+| GitHub | [reconftw](https://github.com/six2dez/reconftw) | Study how recon workflows are assembled; use only on authorized targets |
+| Practice | [Hack The Box](https://www.hackthebox.com/) | Enumeration against intentionally vulnerable targets |
+| Practice | [TryHackMe](https://tryhackme.com/) | Guided recon and enumeration learning paths |
+
+**Note:** recon is not “run 20 tools.” Build an asset inventory, record evidence and explain why each next step follows from the previous observation.
+
+
+# 🌍 Phase 7 — Web Application Security
+
+Web security deserves serious attention because modern organizations expose large amounts of functionality through web applications and APIs.
 
-- ****ISC2 Certified in Cybersecurity (CC)**** — [isc2.org/certifications/cc](https\://www.isc2.org/certifications/cc)
+## Understand the stack
 
-  Vendor-neutral and foundational. The free "One Million Certified" program ****closed to new enrollments on May 20, 2026****; the CC is now a standard paid exam (~$199 + $50 AMF), with a ****new exam outline effective September 1, 2026****.
+```text
+Browser
+   ↓
+DNS
+   ↓
+TLS
+   ↓
+Web Server
+   ↓
+Application
+   ↓
+API / Database / Services
+```
 
-- ****CompTIA Network+**** — [comptia.org/certifications/network](https\://www.comptia.org/certifications/network)
+| Area | Learn |
+|---|---|
+| HTTP | Methods · headers · status codes · content types |
+| Sessions | Cookies · tokens · session lifecycle |
+| Authentication | Login · recovery · MFA concepts |
+| Authorization | Roles · object ownership · access control |
+| Input | Validation · encoding · interpretation |
+| APIs | Endpoints · authentication · authorization |
+| Browser | DOM · JavaScript · same-origin concepts |
+| Architecture | Reverse proxies · application servers · databases |
 
-  Networking foundation. Recommended before Security+ if you lack a networking background.
+## OWASP-focused study
 
-**### Intermediate (after a year or two)**
+Study:
 
-- ****CompTIA CySA+**** — [comptia.org/certifications/cybersecurity-analyst](https\://www.comptia.org/certifications/cybersecurity-analyst) — best second cert for SOC/blue-team careers.
+- broken access control;
+- authentication failures;
+- injection;
+- cryptographic failures;
+- security misconfiguration;
+- vulnerable components;
+- identification and authentication weaknesses;
+- software/data integrity failures;
+- logging and monitoring weaknesses;
+- SSRF;
+- insecure design.
 
-- ****CompTIA PenTest+**** — [comptia.org/certifications/pentest](https\://www.comptia.org/certifications/pentest) — bridge to offensive security before OSCP.
+### The important question
 
-- ****CompTIA SecAI+ (CY0-001)**** — [comptia.org/en-us/certifications/secai](https\://www.comptia.org/en-us/certifications/secai/) — launched ****Feb 17, 2026****; the first vendor-neutral AI-security cert. Builds on Security+/CySA+/PenTest+ and covers securing AI systems, AI-assisted security operations, and AI governance/risk/compliance.
+> **Where does user-controlled data go, and what interprets it next?**
 
-- ****Certified Ethical Hacker (CEH)**** — [eccouncil.org](https\://www.eccouncil.org/programs/certified-ethical-hacker-ceh/) — HR-friendly but criticized as theory-heavy; often required for government roles.
+---
 
-- ****INE eJPT**** — [security.ine.com](https\://security.ine.com/certifications/ejpt-certification/) — affordable, practical entry to pentesting.
+### 📚 Learn & Practice Resources
 
-**### Advanced / Specialist**
+| Type | Resource | Best use |
+|---|---|---|
+| Learn + Labs | [PortSwigger Web Security Academy](https://portswigger.net/web-security) | One of the strongest free hands-on web-security learning paths |
+| Standard | [OWASP Top 10](https://owasp.org/www-project-top-ten/) | Common web application risk categories |
+| Methodology | [OWASP WSTG](https://owasp.org/www-project-web-security-testing-guide/) | Detailed testing methodology |
+| Lab | [OWASP Juice Shop](https://github.com/juice-shop/juice-shop) | Intentionally vulnerable modern web application |
+| GitHub | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | Reference for web-security testing ideas and payload patterns |
+| API Lab | [vAPI](https://github.com/roottusk/vapi) | Practice OWASP API security scenarios locally |
+| Book | [The Web Application Hacker's Handbook](https://www.oreilly.com/library/view/the-web-application/9781118026470/) | Classic reference; pair it with current PortSwigger Academy material |
 
-- ****OSCP / OSCP+ (OffSec)**** — [offsec.com/courses/pen-200](https\://www.offsec.com/courses/pen-200/) — gold standard for hands-on pentesting. OSCP is lifetime; ****OSCP+**** carries a 3-year validity (renewable via the OffSec CPE program, a recert exam, or another qualifying OffSec exam). Both are awarded on passing.
+**Recommended order:** HTTP → sessions/auth → access control → injection → XSS → SSRF → file handling → APIs → business logic.
 
-- ****CompTIA SecurityX (formerly CASP+)**** — [comptia.org](https\://www.comptia.org/certifications/comptia-advanced-security-practitioner) — advanced/architect-level; CASP+ holders transition automatically.
 
-- ****GIAC GCIH / GSEC / GCFA / GPEN / GWAPT**** — [giac.org/certifications](https\://www.giac.org/certifications/) — highly respected but expensive (typically paired with SANS training).
+# 🧪 Phase 8 — Vulnerability Research
 
-- ****ISC2 CISSP**** — [isc2.org/certifications/cissp](https\://www.isc2.org/certifications/cissp) — the leadership/architecture gold standard. Requires 5 years' experience.
+Don't jump directly from "I found a version" to "I found an exploit."
 
-- ****ISC2 CCSP**** — [isc2.org/certifications/ccsp](https\://www.isc2.org/certifications/ccsp) — cloud security expert. Check ISC2 for the current exam outline before scheduling.
+Use:
 
-- ****ISACA CISA / CISM / CRISC**** — [isaca.org](https\://www.isaca.org/credentialing/cisa) — audit, management, and risk; the GRC gold standards.
+```text
+Observation
+    ↓
+Hypothesis
+    ↓
+Reproduction
+    ↓
+Validation
+    ↓
+Impact
+    ↓
+Evidence
+    ↓
+Remediation
+```
 
-- ****AWS Certified Security – Specialty**** — [aws.amazon.com](https\://aws.amazon.com/certification/certified-security-specialty/)
+| Skill | Learn |
+|---|---|
+| CVE literacy | Affected versions · prerequisites · severity |
+| Root cause | Why the weakness exists |
+| Reproduction | Controlled validation |
+| False positives | Why scanners can be wrong |
+| Impact | What the weakness actually enables |
+| Remediation | How the condition should be removed |
+
+### Important distinction
+
+> **A CVE does not automatically mean a particular target is exploitable.**
+
+Always verify the actual conditions.
 
-- ****Microsoft SC-100 Cybersecurity Architect Expert**** — [learn.microsoft.com](https\://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/)
+---
 
-> ****A practical path for most beginners:****
+### 📚 Learn & Practice Resources
 
-> Google Cybersecurity Cert → Security+ → CySA+ (or PenTest+) → then a track cert (OSCP+ for offense, CCSP/SC-100 for cloud, CISA/CISM for GRC, SecAI+ for AI) → CISSP once you have the experience.
+| Type | Resource | Best use |
+|---|---|---|
+| Vulnerability data | [NVD](https://nvd.nist.gov/) | CVEs, affected products and vulnerability metadata |
+| Vulnerability data | [CVE.org](https://www.cve.org/) | Primary CVE ecosystem and identifiers |
+| Research | [Google Project Zero](https://googleprojectzero.blogspot.com/) | Read high-quality vulnerability research and root-cause analysis |
+| Practice | [pwn.college](https://pwn.college/) | Vulnerability and exploitation fundamentals |
+| GitHub | [OSS-Fuzz](https://github.com/google/oss-fuzz) | Learn how large-scale fuzzing finds software bugs |
+| Reference | [Exploit-DB](https://www.exploit-db.com/) | Study public exploit history and research patterns; validate safely |
+
+**Research habit:** reproduce in a controlled environment, identify root cause, document impact and determine the smallest reliable fix.
 
-**---**
 
-**## 📅 6-Month Roadmap**
+# ⬆️ Phase 9 — Privilege Escalation
 
-A realistic plan. Adjust the pace to your schedule — full-time learners can compress this; nights/weekends learners may stretch to 9–12 months.
+Privilege escalation is fundamentally an access-control problem.
 
-\| Month       | Focus Area                        | Activities                                                                                                              | Resources                                                                                                                                     |
+### Linux
 
-\|-------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Area | Study |
+|---|---|
+| Permissions | Files · directories · ownership |
+| Sudo | Delegated administrative access |
+| Services | Service identity and configuration |
+| Scheduled tasks | Automated execution |
+| Environment | Variables and execution context |
+| Processes | Ownership and privileges |
+| Credentials | Where sensitive authentication material may reside |
 
-\| ****Month 1**** | Networking + Linux                | Set up a home lab in VirtualBox; install Ubuntu and Kali; complete networking basics; practice on the Linux CLI         | [Cisco NetAcad](https\://www.netacad.com/), [Linux Journey](https\://linuxjourney.com/), [OverTheWire Bandit](https\://overthewire.org/wargames/bandit/) |
+### Windows
 
-\| ****Month 2**** | Security fundamentals + CIA triad | Begin Security+ study; learn the CIA triad, AAA, common threats; skim NIST CSF 2.0                                       | [Professor Messer Security+](https\://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-training-course/), [NIST CSF](https\://www.nist.gov/cyberframework) |
+| Area | Study |
+|---|---|
+| Services | Service accounts and permissions |
+| Scheduled tasks | Execution context |
+| Tokens | Identity and privilege concepts |
+| Groups | Local membership |
+| Privileges | Windows security privileges |
+| Registry | Permissions and configuration |
+| Credentials | Secure credential-handling concepts |
 
-\| ****Month 3**** | Threats, vulns & MITRE            | Study OWASP Top 10 and MITRE ATT&CK; read recent breach case studies; learn ransomware, phishing, supply-chain, AI threats | [OWASP Top 10](https\://owasp.org/www-project-top-ten/), [MITRE ATT&CK](https\://attack.mitre.org/), [Krebs on Security](https\://krebsonsecurity.com/) |
+The central question:
 
-\| ****Month 4**** | Hands-on tools                    | Wireshark, Nmap, Burp Suite, Metasploit, basic Splunk/ELK; start the TryHackMe beginner path                            | [TryHackMe](https\://tryhackme.com/), [Wireshark](https\://www.wireshark.org/), [PortSwigger Academy](https\://portswigger.net/web-security)      |
+> **What can this identity access that it should not be able to access?**
 
-\| ****Month 5**** | Practical skills + projects       | Take the Security+ exam; build out your home lab (AD or SOC); complete your first CTFs; document everything on GitHub    | [Security+](https\://www.comptia.org/certifications/security), [DetectionLab](https\://github.com/clong/DetectionLab), [picoCTF](https\://picoctf.org/), [CTFtime](https\://ctftime.org/) |
+---
 
-\| ****Month 6**** | Specialize + network              | Pick a track (SOC, pentest, cloud, GRC, AI security); attend a virtual conference or local meetup; polish LinkedIn; start applying | [BSides](http\://www.securitybsides.com/), [LinkedIn](https\://www.linkedin.com/), [r/cybersecurity](https\://www.reddit.com/r/cybersecurity/)   |
+### 📚 Learn & Practice Resources
 
-**---**
+| Type | Resource | Best use |
+|---|---|---|
+| Reference | [GTFOBins](https://gtfobins.github.io/) | Unix/Linux privilege and execution primitives |
+| Reference | [LOLBAS](https://lolbas-project.github.io/) | Windows binaries that can have security-relevant uses |
+| Learn | [HackTricks](https://book.hacktricks.wiki/) | Broad pentesting and privilege-escalation reference |
+| Practice | [Hack The Box](https://www.hackthebox.com/) | Vulnerable machines requiring enumeration and escalation |
+| Practice | [TryHackMe](https://tryhackme.com/) | Guided Linux/Windows privilege-escalation rooms |
+| GitHub | [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | Cross-platform pentesting reference |
 
-**## 📈 Tips for Success**
+**Mindset:** ask “what security boundary prevents this action?” rather than memorizing a list of tricks.
 
-- ****Build a portfolio**** — a GitHub repo with documented labs, CTF write-ups, and tools you've written often beats certifications in technical interviews.
 
-- ****Stay updated**** 🔄 — subscribe to 2–3 newsletters **max** (avoid overload). [Risky Business](https\://risky.biz/), [TLDR Sec](https\://tldrsec.com/), and [BleepingComputer](https\://www.bleepingcomputer.com/) are great starts.
+# 🏢 Phase 10 — Active Directory Security
 
-- ****Master core tools**** 🔧 — Wireshark, Nmap, Burp Suite, Metasploit, Splunk, the Linux CLI, and basic SIEM querying appear in nearly every job description.
+Once the AD architecture makes sense, start thinking in attack paths.
 
-- ****Develop soft skills**** — communication separates senior people from technicians. Practice writing clear reports and explaining technical concepts to non-technical stakeholders.
+| Area | Understand |
+|---|---|
+| Kerberos | Authentication and ticket concepts |
+| LDAP | Directory information |
+| ACLs | Object permissions |
+| Groups | Privilege relationships |
+| GPO | Centralized configuration |
+| Delegation | Identity/service relationships |
+| Service accounts | Non-human identity risk |
+| Trusts | Cross-domain relationships |
+| Sessions | Where privileged identities operate |
 
-- ****Find a mentor**** — ISC2 chapters, meetups, and thoughtful LinkedIn outreach. Most professionals will give 30 minutes to someone making genuine effort.
+### Attack-path thinking
 
-- ****Do CTFs**** 🚩 — pick one per month from [CTFtime](https\://ctftime.org/). Even failing teaches a lot.
+```text
+Identity
+   ↓
+Group / Permission
+   ↓
+Resource
+   ↓
+New Access
+   ↓
+Another Identity
+   ↓
+Higher Privilege
+```
 
-- ****Ethics first**** — never use your skills on systems you don't have written permission to test. One unethical act can end a security career.
+The goal is to understand **why the path exists**, not memorize a list of tricks.
 
-- ****Contribute to open source**** 🛠️ — bug reports, docs, and small fixes are great resume material.
+---
 
-- ****Embrace "Try Harder"**** — persistence beats genius. Most senior pros got there by being stubborn, not brilliant.
+### 📚 Learn & Practice Resources
 
-**---**
+| Type | Resource | Best use |
+|---|---|---|
+| Lab | [GOAD](https://github.com/Orange-Cyberdefense/GOAD) | Purpose-built AD pentesting lab |
+| Reference | [BloodHound Community Edition](https://github.com/SpecterOps/BloodHound) | Understand and visualize identity relationships and attack paths |
+| Reference | [AD Security](https://adsecurity.org/) | Deep AD security research |
+| Reference | [InternalAllTheThings](https://github.com/swisskyrepo/InternalAllTheThings) | Internal/AD pentesting reference material |
+| Learn | [Microsoft AD DS documentation](https://learn.microsoft.com/windows-server/identity/ad-ds/) | Understand the legitimate architecture first |
+| Practice | [TryHackMe AD content](https://tryhackme.com/) | Guided identity and domain labs |
 
-**## 📚 Recommended Books**
+**Certification direction:** build real AD lab ability before considering advanced offensive certifications such as OSCP+/OSEP/CRTO.
 
-- **The Web Application Hacker's Handbook** — Dafydd Stuttard & Marcus Pinto
 
-- **Hacking: The Art of Exploitation** — Jon Erickson
+# 🔀 Phase 11 — Internal Network Security
 
-- **The Tangled Web** — Michał Zalewski
+Study how enterprise networks are divided and where trust boundaries exist.
 
-- **Practical Malware Analysis** — Sikorski & Honig
+| Area | Learn |
+|---|---|
+| Segmentation | VLANs · security zones |
+| Routing | Internal routes and gateways |
+| Firewalls | Filtering between zones |
+| Proxies | Controlled network access |
+| Identity | Workstation/server relationships |
+| Administration | Privileged management paths |
+| Services | Shared enterprise infrastructure |
+| Trust | What one system assumes about another |
 
-- **Cybersecurity Essentials** — Charles J. Brooks et al. (great intro)
+### Defensive question
 
-- **Sandworm** — Andy Greenberg (nation-state threats)
+> If one workstation were compromised, what should stop the attacker from reaching the next important system?
 
-- **Countdown to Zero Day** — Kim Zetter (the Stuxnet story)
+That question naturally connects red-team testing with architecture and defense.
 
-- **The Cuckoo's Egg** — Cliff Stoll (a classic)
+---
 
-- **Permanent Record** — Edward Snowden
+### 📚 Learn & Practice Resources
 
-- **Click Here to Kill Everybody** — Bruce Schneier
+| Type | Resource | Best use |
+|---|---|---|
+| Practice | [Hack The Box](https://www.hackthebox.com/) | Internal network and multi-host practice |
+| Practice | [Proving Grounds](https://www.offsec.com/labs/proving-grounds/) | Structured offensive-security labs |
+| Reference | [MITRE ATT&CK](https://attack.mitre.org/) | Map internal techniques to attacker behavior |
+| GitHub | [InternalAllTheThings](https://github.com/swisskyrepo/InternalAllTheThings) | Internal pentesting and AD reference |
+| Learn | [Wireshark Documentation](https://www.wireshark.org/docs/) | Analyze internal traffic and protocols |
+| Framework | [CIS Controls](https://www.cisecurity.org/controls) | Understand segmentation, hardening and monitoring from the defensive side |
 
-- **Blue Team Handbook** — Don Murdoch
+**Lab target:** understand how a foothold can become an identity, network or application path without treating lateral movement as a bag of commands.
 
-- **RTFM / BTFM** (Red/Blue Team Field Manuals) — Ben Clark / Alan White (cheat-sheet style)
 
-**---**
+# ☁️ Phase 12 — Cloud Security
 
-**## 🤝 Communities**
+Choose at least one major platform:
 
-- [OWASP](https\://owasp.org/) — open web application security; local chapters worldwide
+- AWS
+- Microsoft Azure
+- Google Cloud
 
-- [DEF CON Groups](https\://defcongroups.org/) — local hacker meetups
+| Area | Learn |
+|---|---|
+| Organization | Accounts · subscriptions · projects |
+| Compute | VMs · containers · serverless |
+| Networking | VPC/VNet · routing · security groups |
+| Storage | Buckets · object access |
+| IAM | Users · roles · policies |
+| Secrets | Keys · tokens · secret stores |
+| Logging | Audit trails · activity logs |
+| Workloads | Service identities and permissions |
 
-- [BSides](http\://www.securitybsides.com/) — community-driven conferences globally
+### Cloud security is heavily identity-driven.
 
-- [ISC2 Chapters](https\://www.isc2.org/chapters)
+Ask:
 
-- [ISACA Chapters](https\://engage.isaca.org/home)
+> Who can access this resource, with which identity, under which conditions, and what evidence is logged?
 
-- ****Philippines:**** [ROOTCON](https\://www.rootcon.org/) — the premier PH hacking conference
+---
 
-- ****Discord:**** TCM Security, John Hammond, NetworkChuck, and the official Hack The Box community servers
+### 📚 Learn & Practice Resources
 
-**---**
+| Type | Resource | Best use |
+|---|---|---|
+| AWS | [AWS Security Documentation](https://docs.aws.amazon.com/security/) | IAM, logging, network and service security |
+| Azure | [Microsoft Cloud Security](https://learn.microsoft.com/security/) | Azure identity, security and architecture |
+| Framework | [MITRE ATT&CK Cloud](https://attack.mitre.org/matrices/enterprise/cloud/) | Cloud attacker behavior and techniques |
+| Lab | [AWSGoat](https://github.com/ine-labs/AWSGoat) | Deliberately vulnerable AWS environment |
+| Lab | [CloudGoat](https://github.com/RhinoSecurityLabs/cloudgoat) | Vulnerable-by-design AWS scenarios |
+| GitHub | [Cloud Security Alliance](https://github.com/CloudSecurityAlliance) | Cloud-security standards and projects |
 
-**## ❓ Frequently Asked Questions**
+**Important:** cloud labs can create real costs. Use dedicated test accounts, least privilege, budgets and teardown procedures. AWSGoat itself notes that charges can apply outside free-tier conditions.
 
-**### How do I start cybersecurity with no experience?**
 
-Start with networking and Linux fundamentals, then Security+ concepts. Do one hands-on lab (TryHackMe) per day and document what you learn publicly on GitHub. Aim for a first role like SOC Analyst Tier 1, junior analyst, or a help-desk → security pivot.
+# 🪪 Phase 13 — Identity & Access Security
 
-**### Which certification should I get first?**
+Identity connects traditional infrastructure, cloud and applications.
 
-For most people, ****CompTIA Security+**** is the best first cert — it's widely required and satisfies DoD 8140. If budget is tight, the ****Google Cybersecurity Certificate**** is a strong, affordable starting point. ****Network+**** first if you lack networking background.
+| Topic | Understand |
+|---|---|
+| MFA | Additional authentication factors |
+| SSO | Centralized authentication |
+| OAuth | Delegated authorization |
+| OIDC | Identity layer over OAuth |
+| SAML | Enterprise federation concepts |
+| RBAC | Role-based permissions |
+| ABAC | Attribute-based decisions |
+| Service accounts | Non-human identities |
+| Secrets | Keys, tokens and credentials |
+| Machine identity | Workloads and services |
 
-**### Is the ISC2 CC still free in 2026?**
+### 2026 focus
 
-No. The free "One Million Certified in Cybersecurity" program ****closed to new enrollments on May 20, 2026****. The CC is now a standard paid exam (~$199 + $50 annual maintenance fee), and a refreshed exam outline takes effect ****September 1, 2026****.
+Pay particular attention to:
 
-**### Should I take Security+ SY0-701 now or wait for SY0-801?**
+- machine identities;
+- API keys;
+- CI/CD credentials;
+- cloud roles;
+- service accounts;
+- AI-agent identities.
 
-Take ****SY0-701**** now if you're ready. It's proven, well-supported, and stays valid for three years regardless of version. Only wait for SY0-801 (expected to preview around late 2026, with new AI/LLM content) if you genuinely won't be ready until then or are targeting an AI-centric role.
+---
 
-**### Do I need to know how to code?**
+### 📚 Learn & Practice Resources
 
-You don't need to be a software engineer, but you should be able to read and write scripts. Learn ****Python**** first, then ****Bash****, and ****PowerShell**** if you'll work with Windows/Active Directory.
+| Type | Resource | Best use |
+|---|---|---|
+| Framework | [NIST Digital Identity Guidelines](https://pages.nist.gov/800-63-4/) | Authentication and identity assurance concepts |
+| Learn | [Microsoft Entra ID documentation](https://learn.microsoft.com/entra/) | Modern enterprise identity and access management |
+| Learn | [OAuth 2.0](https://oauth.net/2/) | Authorization flows and terminology |
+| Learn | [OpenID Connect](https://openid.net/developers/how-connect-works/) | Identity layer built on OAuth 2.0 |
+| Practice | [PortSwigger Authentication Labs](https://portswigger.net/web-security/authentication) | Apply authentication/session concepts |
+| Reference | [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) | Application-level identity and access-control requirements |
 
-**### Is a degree required for cybersecurity?**
+**Core question:** who is the subject, what is it allowed to do, where is that decision enforced, and what happens when the identity boundary fails?
 
-No. A degree helps with some employers, but hands-on skills, a portfolio, and relevant certs are what most hiring managers actually screen for.
 
-**### What are the fastest-growing cybersecurity areas in 2026?**
+# 🎯 Phase 14 — Adversary Simulation & Red Team Operations
 
-****Cloud security****, ****AI security**** (securing AI systems and defending against AI-enabled attacks), ****identity/IAM**** (including non-human/machine identity), and ****OT/ICS security**** — all with significant talent gaps.
+Red teaming is broader than finding vulnerabilities.
 
-**### How long does it take to get a cybersecurity job?**
+A mature exercise asks whether an organization can:
 
-With consistent effort, many people go from zero to a first entry-level role in roughly ****6–12 months**** — faster with prior IT experience, slower if studying part-time. The 6-month roadmap above is a realistic backbone.
+- prevent;
+- detect;
+- investigate;
+- respond;
+- recover;
+- and improve.
 
-**---**
+## Engagement lifecycle
 
-**## 🤗 Contributing**
+| Stage | Focus |
+|---|---|
+| Planning | Objectives and scope |
+| Rules of Engagement | Safety and authorization |
+| Recon | Build the environment picture |
+| Initial Access Simulation | Test an approved entry path |
+| Access Analysis | Understand permissions |
+| Objective | Demonstrate agreed impact |
+| Detection | Observe defensive visibility |
+| Cleanup | Return the environment to agreed state |
+| Reporting | Explain findings and risk |
+| Debrief | Improve defenses |
 
-Contributions are welcome! If you spot a broken link, an outdated fact, or have a resource to add, please [open an issue or a pull request](https\://github.com/carlcastanas/Cybersecurity-Roadmap/pulls). Please keep resources free or clearly labeled, and prefer official/canonical sources.
+### The operator mindset
 
-**---**
+Don't ask only:
 
-**## 👤 Author**
+> "Can this work?"
 
-****Fawad Qureshi****
+Also ask:
 
-This roadmap represents my own research, learning, organization, and curation of cybersecurity resources from a ****red-team / offensive-security perspective****.
+> "Why does it work, what evidence would it produce, what control should stop it, and how would I explain the result?"
 
-If you find an outdated link, incorrect information, or a useful resource that should be added, open an issue or pull request with the relevant details.
+---
 
+### 📚 Learn & Practice Resources
 
+| Type | Resource | Best use |
+|---|---|---|
+| Framework | [MITRE ATT&CK](https://attack.mitre.org/) | Adversary behaviors and technique mapping |
+| Methodology | [MITRE Adversary Emulation Plans](https://github.com/center-for-threat-informed-defense/adversary_emulation_library) | Study realistic adversary behaviors in controlled environments |
+| Framework | [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) | Small, testable security-validation techniques |
+| Platform | [CALDERA](https://github.com/mitre/caldera) | Automated adversary emulation in controlled environments |
+| Lab | [Prelude Operator](https://www.prelude.org/) | Adversary simulation and detection validation |
+| Reference | [Red Team Field Manual](https://github.com/leostat/rtfm) | Compact field reference; use as a supplement, not a curriculum |
 
-**---**
+**Professional requirement:** learn rules of engagement, authorization, evidence handling, safety controls, objectives and reporting before attempting realistic simulations.
 
-**## 🕒 Last Updated**
 
-- ****Timezone:**** Pakistan Standard Time (PKT) — UTC+5
+# 🕵️ Phase 15 — OPSEC & Detection Awareness
 
-- ****Last Updated:**** October 8, 2026
+OPSEC in professional red teaming is not simply "hide from defenders."
 
-- ****Version:**** 3.0 — Red Team Edition 2026
+It is about understanding exposure, constraints and the telemetry generated by activity.
 
-> If this roadmap helps you learn, improve it, practice it legally, and pass the knowledge forward. Stay curious, stay ethical, and keep learning. 🟥🔐
+| Defensive Visibility | Study |
+|---|---|
+| Endpoint | Processes · files · registry · security events |
+| Network | Connections · DNS · proxy · traffic |
+| Identity | Authentication · privilege events |
+| Cloud | Audit logs · API activity |
+| SIEM | Correlation and alerting |
+| EDR | Endpoint detection and investigation |
+| Detection engineering | Turning telemetry into useful detections |
 
-## 🤝 Contributing
+For every technique, ask:
 
-Found something outdated, broken, or genuinely useful?
+```text
+What happens?
+        ↓
+What telemetry exists?
+        ↓
+What might trigger an alert?
+        ↓
+What should the defender investigate?
+```
 
-Open an issue or pull request with a clear explanation and source.
+---
 
-Keep contributions practical, relevant, and useful for learners.
+### 📚 Learn & Practice Resources
+
+| Type | Resource | Best use |
+|---|---|---|
+| Detection | [MITRE ATT&CK](https://attack.mitre.org/) | Understand what defenders can observe |
+| Detection | [Sigma](https://sigmahq.io/) | Study portable detection logic |
+| Detection | [Sysmon](https://learn.microsoft.com/sysinternals/downloads/sysmon) | Generate useful Windows telemetry in a lab |
+| Lab | [Blue Team Labs Online](https://blueteamlabs.online/) | Use blue-team labs to understand telemetry and investigation |
+| Framework | [NIST CSF](https://www.nist.gov/cyberframework) | Connect offensive findings to defensive outcomes |
+| Learn | [MITRE ATT&CK Data Sources](https://attack.mitre.org/datasources/) | Understand what telemetry can support detection |
+
+**Important distinction:** OPSEC in this roadmap means controlled, engagement-aware behavior and understanding defensive visibility—not instructions for evading law enforcement or hiding unauthorized activity.
+
+
+# 🦠 Phase 16 — Malware & Reverse Engineering
+
+This is an advanced specialization and should come after strong OS and programming fundamentals.
+
+| Area | Learn |
+|---|---|
+| Static analysis | Files · strings · imports · structure |
+| Dynamic analysis | Runtime behavior |
+| Debugging | Execution and memory |
+| Binary formats | PE / ELF concepts |
+| Assembly | Basic instruction-level understanding |
+| Processes | Memory and execution |
+| Network behavior | Communication patterns |
+
+Useful tools for isolated research environments include:
+
+- Ghidra
+- x64dbg
+- Wireshark
+- Procmon
+- Autoruns
+- sandboxing platforms
+
+Only analyze unknown or malicious samples in properly isolated environments.
+
+---
+
+### 📚 Learn & Practice Resources
+
+| Type | Resource | Best use |
+|---|---|---|
+| Tool | [Ghidra](https://github.com/NationalSecurityAgency/ghidra) | Static analysis, disassembly and reverse engineering |
+| Tool | [x64dbg](https://x64dbg.com/) | Windows debugging |
+| Reference | [Windows Sysinternals](https://learn.microsoft.com/sysinternals/) | Process, filesystem and Windows behavior analysis |
+| Tool | [Volatility 3](https://github.com/volatilityfoundation/volatility3) | Memory analysis and forensic investigation |
+| Practice | [picoCTF](https://picoctf.org/) | Beginner-friendly reverse-engineering challenges |
+| Book | [Practical Malware Analysis](https://nostarch.com/malware) | Classic malware-analysis foundation; use in an isolated lab |
+
+**Safety rule:** never execute unknown samples on your normal machine. Use isolated VMs, controlled networking, snapshots and appropriate analysis procedures.
+
+
+# 🤖 Phase 17 — AI Security
+
+AI security is now part of the modern attack surface.
+
+| Area | Study |
+|---|---|
+| Prompt injection | Manipulating model instructions |
+| Data exposure | Sensitive information reaching models |
+| Tool abuse | AI systems interacting with external tools |
+| Agent security | Identity and permissions of AI agents |
+| Supply chain | Models, datasets and dependencies |
+| Data poisoning | Manipulation of training/input data |
+| Model extraction | Unauthorized recovery of model behavior |
+| Social engineering | AI-assisted impersonation and persuasion |
+
+### Frameworks
+
+- OWASP Top 10 for LLM Applications
+- MITRE ATLAS
+- NIST AI Risk Management Framework
+
+A particularly important modern question:
+
+> **What can an AI agent do if its identity, tools or permissions are abused?**
+
+---
+
+### 📚 Learn & Practice Resources
+
+| Type | Resource | Best use |
+|---|---|---|
+| Standard | [OWASP GenAI Security Project](https://genai.owasp.org/) | Current LLM/GenAI security risks and guidance |
+| Framework | [MITRE ATLAS](https://atlas.mitre.org/) | Adversarial threats against AI-enabled systems |
+| Framework | [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) | AI risk-management concepts |
+| Practice | [OWASP Web Security Academy](https://portswigger.net/web-security) | Keep web/API security fundamentals strong while learning AI security |
+| GitHub | [OWASP GenAI Security Project](https://github.com/OWASP/www-project-top-10-for-large-language-model-applications) | Community-maintained LLM security material |
+| Research | [Google DeepMind Security](https://deepmind.google/discover/blog/) | Follow current AI safety/security research |
+
+**Study order:** application architecture → model interaction → prompt/data boundaries → tool permissions → agent identity → logging/evaluation → adversarial testing.
+
+
+# 📝 Phase 18 — Reporting & Professional Tradecraft
+
+A technically correct finding is not enough.
+
+A professional report should allow a technical team and a decision-maker to understand the same issue from different perspectives.
+
+| Report Section | Purpose |
+|---|---|
+| Title | State the problem clearly |
+| Severity | Prioritize the issue |
+| Affected Asset | Define scope |
+| Description | Explain the condition |
+| Evidence | Prove the observation |
+| Impact | Explain business/security consequences |
+| Reproduction | Allow authorized validation |
+| Remediation | Give a practical fix |
+| References | Support further investigation |
+
+### Finding template
+
+```text
+Finding:
+Severity:
+Affected Asset:
+Description:
+Evidence:
+Impact:
+Recommendation:
+Validation / Retest:
+References:
+```
+
+### Good reporting is a security skill.
+
+If you cannot explain the issue clearly, the technical work is incomplete.
+
+---
+
+### 📚 Learn & Practice Resources
+
+| Type | Resource | Best use |
+|---|---|---|
+| Methodology | [OWASP WSTG](https://owasp.org/www-project-web-security-testing-guide/) | Learn how professional technical testing is structured |
+| Framework | [PTES](http://www.pentest-standard.org/) | Penetration-testing methodology and engagement structure |
+| Framework | [NIST SP 800-115](https://csrc.nist.gov/pubs/sp/800/115/final) | Technical security-testing guidance |
+| Reference | [MITRE ATT&CK](https://attack.mitre.org/) | Communicate techniques using a common vocabulary |
+| Practice | [Hack The Box](https://www.hackthebox.com/) | Produce your own technical notes and reports from lab work |
+| Book | [The Practice of Network Security Monitoring](https://nostarch.com/nsm) | Strengthen the defensive/reporting perspective |
+
+**Portfolio rule:** publish sanitized, legal lab reports—not client data, secrets, credentials or unauthorized findings.
+
+
+# 🧪 Practical Lab Architecture
+
+Start small and grow the environment.
+
+## Level 1
+
+```text
+Host
+ ├── Linux VM
+ ├── Windows VM
+ └── Vulnerable Web Application
+```
+
+## Level 2
+
+```text
+             Isolated Lab Network
+                    │
+          ┌─────────┼─────────┐
+          │         │         │
+       Linux     Windows    Web App
+                    │
+              Windows Server
+```
+
+## Level 3
+
+```text
+                 Domain Controller
+                        │
+            ┌───────────┼───────────┐
+            │           │           │
+       Workstation    Server     Admin VM
+            │           │
+            └──────┬────┘
+                   │
+             Security Lab
+```
+
+The objective is not to build the largest lab.
+
+The objective is to create an environment where you can **observe, break, troubleshoot, restore and document**.
+
+---
+
+# 🌐 Recommended Learning Platforms
+
+| Platform | Best For |
+|---|---|
+| **TryHackMe** | Guided beginner-to-intermediate learning |
+| **Hack The Box** | Practical labs and independent problem solving |
+| **PortSwigger Web Security Academy** | Deep web-security practice |
+| **OverTheWire** | Linux and command-line fundamentals |
+| **OWASP Juice Shop** | Web application security |
+| **VulnHub** | Vulnerable local VMs |
+| **Microsoft Learn** | Windows, Azure and security fundamentals |
+
+---
+
+# 🧰 Tool Categories
+
+Don't install everything at once.
+
+Learn the category first.
+
+| Category | Examples | Purpose |
+|---|---|---|
+| Network analysis | Wireshark · tcpdump | Inspect traffic |
+| Service discovery | Nmap | Understand exposed services |
+| Web testing | Burp Suite | Analyze web applications |
+| Browser analysis | Developer Tools | Inspect client-side behavior |
+| AD analysis | Directory / graph analysis tools | Understand identity relationships |
+| Reverse engineering | Ghidra · x64dbg | Analyze binaries |
+| System analysis | Procmon · Autoruns | Understand Windows behavior |
+| Documentation | Markdown · diagrams | Preserve evidence and findings |
+
+> **Tool knowledge is useful. Tool dependency is not.**
+
+---
+
+# 📜 Certification Roadmap
+
+Certifications should validate skills you are already building. They are not substitutes for labs, projects or fundamentals. Current official references are linked below.
+
+| Stage | Certification | Best fit | When to consider it | Official
+|---|---|---|---|---|
+| Beginner | ISC2 CC | First cybersecurity credential | After Phase 4 fundamentals | [ISC2 CC](https://www.isc2.org/certifications/cc) |
+| Beginner | CompTIA Network+ | Networking foundation | Around Phase 1–4 if you want a structured baseline | [Network+](https://www.comptia.org/certifications/network) |
+| Beginner / Core | CompTIA Security+ | Broad security foundation | After networking + security fundamentals | [Security+](https://www.comptia.org/certifications/security) |
+| Entry offensive | eJPT | First practical pentesting milestone | After networking, Linux, Windows and basic web testing | [eJPT](https://security.ine.com/certifications/ejpt-certification/) |
+| Practical pentest | PNPT | Practical pentesting/reporting | After solid hands-on fundamentals | [TCM Certifications](https://certifications.tcm-sec.com/) |
+| Advanced pentest | OSCP+ | Serious hands-on penetration testing | After substantial lab experience | [OSCP+](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide) |
+| Advanced offensive | OSEP | Advanced exploitation and adversary simulation | After strong OSCP-level skills | [OffSec](https://www.offsec.com/courses/pen-300/) |
+| Red team | CRTO | Command-and-control/red-team tradecraft | After strong AD, Windows and network skills | [Zero-Point Security](https://training.zeropointsecurity.co.uk/) |
+| Web security | OSWA / OSWE | Web application specialization | After serious PortSwigger/OWASP practice | [OffSec Web](https://www.offsec.com/courses/) |
+| Cloud | Cloud-specific certs | AWS/Azure/GCP security | After real cloud fundamentals and labs | [AWS Security](https://aws.amazon.com/certification/); [Microsoft Security](https://learn.microsoft.com/credentials/) |
+
+### 🎯 Recommended Red-Team Sequence
+
+```text
+Networking + Linux + Windows
+          ↓
+Security fundamentals
+          ↓
+Web + enumeration + scripting
+          ↓
+Hands-on labs / CTFs
+          ↓
+eJPT / PNPT (optional milestone)
+          ↓
+Active Directory + internal networks
+          ↓
+Serious lab portfolio
+          ↓
+OSCP+
+          ↓
+OSEP / CRTO / OSWA / OSWE / cloud specialization
+```
+
+**Do not buy every certification.** Pick credentials that match the role you actually want. OffSec currently lists PEN-200/OSCP, WEB-200/OSWA, WEB-300/OSWE, PEN-300 and other specialist paths; OSCP+ can also be purchased as a standalone exam if you already have the required skill level.
+
+# 🏆 Portfolio Roadmap
+
+A strong portfolio should show **how you think**, not just what tools you used.
+
+| Stage | Project | Demonstrates |
+|---|---|---|
+| Beginner | Network lab | Networking fundamentals |
+| Beginner | Linux hardening | Administration + security |
+| Beginner | Windows lab | Windows fundamentals |
+| Intermediate | Web assessment | Application security |
+| Intermediate | AD lab | Identity + enterprise security |
+| Intermediate | Detection lab | Offensive + defensive thinking |
+| Advanced | Cloud IAM review | Cloud security |
+| Advanced | Adversary simulation lab | Red-team methodology |
+| Advanced | Research report | Technical investigation |
+
+### Each project should contain
+
+```text
+Objective
+Environment
+Methodology
+Observations
+Evidence
+Findings
+Impact
+Remediation
+Lessons Learned
+```
+
+Never publish:
+
+- client information;
+- credentials;
+- secrets;
+- private infrastructure;
+- personal information;
+- confidential reports.
+
+---
+
+# 💼 Job Roles
+
+## Entry
+
+| Role | Useful Foundations |
+|---|---|
+| SOC Analyst | Security + networking + logs |
+| Junior Security Analyst | Security + systems |
+| Security Intern | Fundamentals + labs |
+| Junior Pentester | Networking + Linux + web |
+| Vulnerability Analyst | Vulnerability management + systems |
+
+## Intermediate
+
+| Role | Useful Skills |
+|---|---|
+| Penetration Tester | Web + network + privilege |
+| Security Engineer | Systems + security architecture |
+| AppSec Engineer | Web + code + SDLC |
+| Cloud Security Engineer | Cloud + IAM |
+| Detection Engineer | Telemetry + detection |
+
+## Advanced
+
+| Role | Useful Skills |
+|---|---|
+| Red Team Operator | AD + identity + adversary simulation |
+| Senior Pentester | Broad offensive depth |
+| Security Researcher | Programming + vulnerability research |
+| Red Team Lead | Technical depth + planning + reporting |
+| Security Architect | Broad systems + security design |
+
+---
+
+# 💰 Salary Guide — 2026
+
+> **These are broad market-oriented planning ranges, not guarantees.** Actual compensation depends on city, experience, employer, specialization, clearance, bonuses, benefits and local market conditions.
+
+| Country | Entry Cyber/SOC | Junior Pentest | Security Engineer / Pentest | Experienced Red Team |
+|---|---:|---:|---:|---:|
+| 🇵🇰 Pakistan | PKR 50K–120K/mo | PKR 80K–180K/mo | PKR 120K–300K/mo | PKR 250K–600K+ /mo |
+| 🇮🇳 India | ₹3–8 LPA | ₹4–10 LPA | ₹6–15 LPA | ₹10–25+ LPA |
+| 🇺🇸 USA | US$70K–100K | US$80K–120K | US$100K–150K | US$140K–200K+ |
+| 🇨🇦 Canada | C$60K–85K | C$70K–100K | C$90K–125K | C$115K–160K+ |
+| 🇦🇺 Australia | A$75K–105K | A$70K–95K | A$95K–130K | A$140K–190K+ |
+
+### Australia senior progression
+
+Australian salary guides can show higher ranges at senior/principal level:
+
+| Role | Approx. 2026 Range |
+|---|---:|
+| Junior Penetration Tester | A$70K–95K |
+| Penetration Tester | A$95K–130K |
+| Senior Penetration Tester | A$140K–160K |
+| Principal Penetration Tester | A$155K–190K |
+
+Salary data should always be treated as a market snapshot. A certification alone does not determine compensation.
+
+---
+
+# 📅 6-Month Roadmap
+
+| Month | Focus | Practical Deliverable |
+|---:|---|---|
+| 1 | Networking + Linux + Windows | Build an isolated lab |
+| 2 | Security fundamentals + scripting | Security notes + first report |
+| 3 | HTTP + web security | Web-security lab report |
+| 4 | Recon + enumeration + privilege concepts | Multiple documented labs |
+| 5 | AD + cloud + identity | AD/cloud lab documentation |
+| 6 | Red-team methodology + portfolio | Portfolio + certification preparation |
+
+---
+
+# 🗓️ 12-Month Roadmap
+
+| Quarter | Focus | Goal |
+|---|---|---|
+| Q1 | Networking · Linux · Windows · Python | Strong technical foundation |
+| Q2 | Web · Recon · Vulnerability · Privilege | Offensive fundamentals |
+| Q3 | AD · Cloud · IAM · specialization | Domain depth |
+| Q4 | Red Team · Detection · Reporting · Portfolio | Professional readiness |
+
+---
+
+# ⏱️ Weekly Study System
+
+## 1 Hour / Day
+
+| Time | Activity |
+|---:|---|
+| 20 min | Theory |
+| 30 min | Lab |
+| 10 min | Notes |
+
+## 2 Hours / Day
+
+| Time | Activity |
+|---:|---|
+| 30 min | Theory |
+| 70 min | Practical |
+| 20 min | Documentation |
+
+## 4 Hours / Day
+
+| Time | Activity |
+|---:|---|
+| 45 min | Theory |
+| 2 hr | Practical lab |
+| 45 min | Research |
+| 30 min | Documentation |
+
+The exact schedule matters less than maintaining the cycle:
+
+```text
+Learn → Practice → Investigate → Document
+```
+
+---
+
+# 📊 Measuring Progress
+
+Do not measure yourself only by:
+
+- videos watched;
+- certificates collected;
+- tools installed;
+- CTF flags completed.
+
+Measure whether you can:
+
+| Question | Target |
+|---|---|
+| Explain it? | Yes |
+| Build it? | Yes |
+| Reproduce it safely? | Yes |
+| Troubleshoot it? | Yes |
+| Explain the impact? | Yes |
+| Explain detection? | Yes |
+| Recommend remediation? | Yes |
+| Document it professionally? | Yes |
+
+### A useful rule
+
+> **If you can reproduce it, troubleshoot it, explain it and defend against it, you probably understand it.**
+
+---
+
+# ❌ Common Mistakes
+
+| Mistake | Better Approach |
+|---|---|
+| Starting with "hacking tools" | Start with networking and systems |
+| Skipping networking | Make TCP/IP a priority |
+| Copying commands | Understand every command you use |
+| Collecting certificates | Build practical ability first |
+| Only doing CTFs | Add labs, reports and administration |
+| Ignoring Windows | Learn enterprise identity |
+| Ignoring web security | Learn HTTP and application architecture |
+| Ignoring defense | Study telemetry and detection |
+| Never writing reports | Document every meaningful project |
+| Publishing sensitive material | Publish sanitized work only |
+
+---
+
+# 🎤 Interview Preparation
+
+## Networking
+
+Be ready to explain:
+
+- TCP vs UDP;
+- DNS;
+- HTTP/HTTPS;
+- subnetting;
+- NAT;
+- routing;
+- firewalls;
+- TLS.
+
+## Linux
+
+Know:
+
+- permissions;
+- processes;
+- services;
+- users/groups;
+- networking;
+- logs.
+
+## Windows
+
+Know:
+
+- services;
+- PowerShell;
+- processes;
+- permissions;
+- Event Logs.
+
+## Active Directory
+
+Know:
+
+- domain controllers;
+- Kerberos;
+- LDAP;
+- groups;
+- GPO;
+- ACLs;
+- trusts.
+
+## Web
+
+Know:
+
+- sessions;
+- cookies;
+- authentication;
+- authorization;
+- APIs;
+- OWASP risks.
+
+## Security
+
+Know the difference between:
+
+- threat vs vulnerability;
+- vulnerability vs risk;
+- authentication vs authorization;
+- hashing vs encryption;
+- detection vs prevention.
+
+---
+
+# 🧠 The Questions That Build Real Skill
+
+For every topic, ask:
+
+1. **What is it?**
+2. **Why does it exist?**
+3. **How does it work?**
+4. **What assumptions does it make?**
+5. **What can go wrong?**
+6. **How would I identify the problem?**
+7. **How could I validate it safely?**
+8. **What evidence would I collect?**
+9. **How could a defender detect it?**
+10. **How should it be fixed?**
+
+If you can answer these without blindly following a tutorial, you are moving from memorization toward understanding.
+
+---
+
+# ✅ Red Team Readiness Checklist
+
+### Foundations
+
+- [ ] Computer fundamentals
+- [ ] TCP/IP
+- [ ] DNS
+- [ ] HTTP
+- [ ] Linux
+- [ ] Windows
+- [ ] Virtualization
+
+### Security
+
+- [ ] CIA triad
+- [ ] Authentication
+- [ ] Authorization
+- [ ] Cryptography basics
+- [ ] Vulnerability concepts
+- [ ] Security controls
+- [ ] Logging
+
+### Programming
+
+- [ ] Python
+- [ ] Bash
+- [ ] PowerShell
+- [ ] SQL
+- [ ] JavaScript basics
+
+### Offensive
+
+- [ ] Reconnaissance
+- [ ] Enumeration
+- [ ] Web security
+- [ ] Vulnerability validation
+- [ ] Linux privilege concepts
+- [ ] Windows privilege concepts
+- [ ] Active Directory
+- [ ] Cloud IAM
+
+### Professional
+
+- [ ] Scope awareness
+- [ ] Evidence collection
+- [ ] Report writing
+- [ ] Risk communication
+- [ ] Detection awareness
+- [ ] Remediation recommendations
+- [ ] Legal authorization
+
+---
+
+# 📚 Core Resources
+
+Use this as the roadmap's permanent bookmark list. The phase-specific sections above tell you **when** to use these resources.
+
+### Official references
+
+- [OWASP](https://owasp.org/) — application security
+- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/) — web testing methodology
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — free web-security labs
+- [MITRE ATT&CK](https://attack.mitre.org/) — adversary techniques
+- [MITRE ATLAS](https://atlas.mitre.org/) — AI security threats
+- [NIST CSF](https://www.nist.gov/cyberframework) — cybersecurity framework
+- [NIST SP 800-115](https://csrc.nist.gov/pubs/sp/800/115/final) — technical security testing
+- [CIS Controls](https://www.cisecurity.org/controls) — practical security controls
+- [Microsoft Learn](https://learn.microsoft.com/) — Windows, AD, Azure and identity
+- [AWS Security](https://docs.aws.amazon.com/security/) — AWS security reference
+
+### High-value GitHub repositories
+
+| Repository | Use it for |
+|---|---|
+| [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | Web/pentesting reference |
+| [HackTricks](https://github.com/HackTricks-wiki/HackTricks) | Broad offensive-security reference |
+| [GOAD](https://github.com/Orange-Cyberdefense/GOAD) | Active Directory lab |
+| [InternalAllTheThings](https://github.com/swisskyrepo/InternalAllTheThings) | Internal/AD reference |
+| [BloodHound](https://github.com/SpecterOps/BloodHound) | Identity/AD graph analysis |
+| [Juice Shop](https://github.com/juice-shop/juice-shop) | Vulnerable web application lab |
+| [vAPI](https://github.com/roottusk/vapi) | API security lab |
+| [AWSGoat](https://github.com/ine-labs/AWSGoat) | Cloud security lab |
+| [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) | Detection/security validation |
+| [MITRE CALDERA](https://github.com/mitre/caldera) | Adversary emulation |
+| [Ghidra](https://github.com/NationalSecurityAgency/ghidra) | Reverse engineering |
+| [Volatility 3](https://github.com/volatilityfoundation/volatility3) | Memory analysis |
+
+### Books worth keeping nearby
+
+- *The Linux Command Line* — William Shotts
+- *Computer Networking: A Top-Down Approach* — Kurose & Ross
+- *Black Hat Python* — Justin Seitz & Tim Arnold
+- *The Web Application Hacker's Handbook* — Dafydd Stuttard & Marcus Pinto
+- *Real-World Bug Hunting* — Peter Yaworski
+- *Practical Malware Analysis* — Michael Sikorski & Andrew Honig
+- *Windows Internals* — Pavel Yosifovich et al.
+- *The Practice of Network Security Monitoring* — Richard Bejtlich
+
+### Hands-on platforms
+
+- [TryHackMe](https://tryhackme.com/) — guided learning
+- [Hack The Box](https://www.hackthebox.com/) — machines and advanced labs
+- [PortSwigger Academy](https://portswigger.net/web-security) — web security
+- [OverTheWire](https://overthewire.org/wargames/) — Linux/security challenges
+- [picoCTF](https://picoctf.org/) — CTF practice
+- [pwn.college](https://pwn.college/) — systems/exploitation learning
+- [CTFtime](https://ctftime.org/) — CTF calendar and competitions
+- [OffSec Proving Grounds](https://www.offsec.com/labs/proving-grounds/) — pentesting labs
+
+> **Resource quality rule:** prefer official documentation and maintained projects. A GitHub repository is useful because it is popular, but popularity alone does not make a technique correct or safe. Check maintenance, scope and licensing before relying on a resource.
+
+# ❓ FAQ
+
+### Do I need programming before starting?
+
+No. Start with networking and operating systems, then build programming gradually. Python is the best general-purpose starting point for many security learners.
+
+### Do I need Linux?
+
+Yes. You should become comfortable with the Linux command line and basic administration.
+
+### Do I need Windows?
+
+Yes. Especially if your long-term goal includes enterprise penetration testing or red teaming.
+
+### Do I need networking?
+
+Absolutely. Strong networking knowledge makes later security topics substantially easier.
+
+### Should I start with Security+?
+
+It can be a good structured security foundation for beginners. Pair it with practical labs rather than studying only for the exam.
+
+### Should I immediately start OSCP?
+
+Usually not. Build networking, Linux, Windows, web and practical lab experience first.
+
+### Is CEH enough for red teaming?
+
+No single certification makes someone a red-team operator. Practical skill, experience, judgment and tradecraft matter.
+
+### Is red teaming just penetration testing?
+
+No. Red teaming generally involves broader objectives, adversary simulation, detection awareness and organizational response.
+
+### Can I learn this for free?
+
+Yes. A substantial amount of high-quality material and hands-on practice is available without paying for every course.
+
+### Do I need an expensive computer?
+
+No. A modest machine can support a useful beginner lab. More RAM and storage become helpful as the lab grows.
+
+---
+
+# 🧭 From Learner to Operator
+
+Think about progression in stages:
+
+| Stage | Description |
+|---|---|
+| **Consumer** | Watches security content |
+| **Student** | Understands concepts |
+| **Practitioner** | Reproduces concepts in labs |
+| **Problem Solver** | Troubleshoots unfamiliar situations |
+| **Professional** | Performs structured assessments and reports |
+| **Operator** | Reasons about objectives, attack paths, constraints and detection |
+
+The purpose of this roadmap is to move through those stages deliberately.
+
+---
+
+# 🔥 The Principle I Would Keep Throughout the Roadmap
+
+> **Don't memorize the attack. Understand the condition that makes the attack possible.**
+
+If you understand the condition, you can:
+
+- recognize it;
+- investigate it;
+- validate it;
+- explain it;
+- detect it;
+- remediate it;
+- recognize related weaknesses.
+
+That is much more durable than memorizing another tool command.
+
+---
+
+# 🚀 Recommended Order
+
+```text
+01  Computer Fundamentals
+02  Networking
+03  Linux
+04  Windows
+05  Security Fundamentals
+06  Python
+07  Bash + PowerShell
+08  HTTP + Web Architecture
+09  OWASP
+10  Reconnaissance
+11  Enumeration
+12  Vulnerability Analysis
+13  Privilege Escalation Concepts
+14  Active Directory
+15  Internal Networks
+16  Cloud
+17  Identity & IAM
+18  Adversary Simulation
+19  OPSEC + Detection
+20  Reporting
+21  Specialization
+22  Certification
+23  Portfolio
+24  Internship / Job
+25  Continuous Learning
+```
+
+---
+
+# 🏁 Final Note
+
+Cybersecurity is not a race.
+
+You will encounter people who know more than you, have more certifications, or have been practicing for years longer. That is normal.
+
+Focus on building the underlying mental model.
+
+Learn the protocol.
+
+Build the environment.
+
+Break it safely.
+
+Read the logs.
+
+Figure out why it broke.
+
+Fix it.
+
+Write down what happened.
+
+Then do it again.
+
+> **Learn the technology first. Understand the attack surface second. Validate safely. Think like the defender. Document everything.**
+
+That is the foundation of real offensive-security capability.
+
+---
+
+## 👤 Author
+
+**Fawad Qureshi**  
+**Focus:** Red Team / Offensive Security  
+**Edition:** 2026
+
+### Purpose
+
+This roadmap is intended for:
+
+- cybersecurity education;
+- authorized security testing;
+- personal labs;
+- CTFs;
+- research;
+- professional development.
+
+> ⚠️ **Authorized-use only:** Never test systems you do not own or have explicit permission to assess.
