@@ -674,7 +674,7 @@ If you find an outdated link, incorrect information, or a useful resource that s
 
 ## 🕒 Last Updated
 
-- **Timezone:** Pakistan Standard Time (PHT) — UTC+8
+- **Timezone:** Pakistan Standard Time (GMT+5)
 - **Last Updated:** October 8, 2026
 - **Version:** 3.0 — Red Team Edition 2026
 
