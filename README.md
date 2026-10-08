@@ -602,31 +602,6 @@ A realistic plan. Adjust the pace to your schedule — full-time learners can co
 
 ---
 
-## ❓ Frequently Asked Questions
-
-### How do I start cybersecurity with no experience?
-Start with networking and Linux fundamentals, then Security+ concepts. Do one hands-on lab (TryHackMe) per day and document what you learn publicly on GitHub. Aim for a first role like SOC Analyst Tier 1, junior analyst, or a help-desk → security pivot.
-
-### Which certification should I get first?
-For most people, **CompTIA Security+** is the best first cert — it's widely required and satisfies DoD 8140. If budget is tight, the **Google Cybersecurity Certificate** is a strong, affordable starting point. **Network+** first if you lack networking background.
-
-### Is the ISC2 CC still free in 2026?
-No. The free "One Million Certified in Cybersecurity" program **closed to new enrollments on May 20, 2026**. The CC is now a standard paid exam (~$199 + $50 annual maintenance fee), and a refreshed exam outline takes effect **September 1, 2026**.
-
-### Should I take Security+ SY0-701 now or wait for SY0-801?
-Take **SY0-701** now if you're ready. It's proven, well-supported, and stays valid for three years regardless of version. Only wait for SY0-801 (expected to preview around late 2026, with new AI/LLM content) if you genuinely won't be ready until then or are targeting an AI-centric role.
-
-### Do I need to know how to code?
-You don't need to be a software engineer, but you should be able to read and write scripts. Learn **Python** first, then **Bash**, and **PowerShell** if you'll work with Windows/Active Directory.
-
-### Is a degree required for cybersecurity?
-No. A degree helps with some employers, but hands-on skills, a portfolio, and relevant certs are what most hiring managers actually screen for.
-
-### What are the fastest-growing cybersecurity areas in 2026?
-**Cloud security**, **AI security** (securing AI systems and defending against AI-enabled attacks), **identity/IAM** (including non-human/machine identity), and **OT/ICS security** — all with significant talent gaps.
-
-### How long does it take to get a cybersecurity job?
-With consistent effort, many people go from zero to a first entry-level role in roughly **6–12 months** — faster with prior IT experience, slower if studying part-time. The 6-month roadmap above is a realistic backbone.
 
 ---
 
