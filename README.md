@@ -639,6 +639,9 @@ Contributions are welcome! If you spot a broken link, an outdated fact, or have 
 ## 👤 Author
 
 **Fawad Qureshi**
+*CEO & Founder — Codensec Security*
+🌐 **[codensec.com](https://codensec.com)**
+
 
 This roadmap represents my own research, learning, organization, and curation of cybersecurity resources from a **red-team / offensive-security perspective**.
 
@@ -649,7 +652,7 @@ If you find an outdated link, incorrect information, or a useful resource that s
 
 ## 🕒 Last Updated
 
-- **Timezone:** Philippine Standard Time (PHT) — UTC+8
+- **Timezone:** Pakistan Standard Time (PHT) — UTC+8
 - **Last Updated:** October 8, 2026
 - **Version:** 3.0 — Red Team Edition 2026
 
