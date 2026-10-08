@@ -601,6 +601,53 @@ A realistic plan. Adjust the pace to your schedule — full-time learners can co
 - **Discord:** TCM Security, John Hammond, NetworkChuck, and the official Hack The Box community servers
 
 ---
+## ❓ Frequently Asked Questions
+
+### How do I start cybersecurity with no experience?
+
+Learn **networking, Linux, Windows, and basic scripting** first. Then practice daily in legal labs like TryHackMe, Hack The Box, and PortSwigger. Don't just watch tutorials — **solve machines and figure out why things work**.
+
+### Do I need certifications?
+
+No. Certifications can help with getting interviews, but **skills matter more for practical security work**. Build labs, solve challenges, document your work, and learn how systems actually work.
+
+### How much coding do I need?
+
+You don't need to be a developer. Learn enough **Python, Bash, and PowerShell** to understand scripts, modify them, automate tasks, and build small tools.
+
+### Can I become a red teamer in 6 months?
+
+You can build a strong foundation in 6 months, but becoming genuinely good takes much longer. **Red teaming is a continuous learning process.**
+
+### What does job-ready actually mean?
+
+You should be able to take an unfamiliar system, **enumerate it, investigate weaknesses, troubleshoot problems, document your findings, and explain the impact** without depending on a walkthrough for every step.
+
+### Are CTFs enough?
+
+No. CTFs are great for technical practice, but real engagements also involve **scope, authorization, documentation, reporting, and business impact**.
+
+### Do I need Kali Linux?
+
+No. Kali is useful, but it doesn't make you a hacker. **Understand the underlying technology first; tools come second.**
+
+### What's the biggest beginner mistake?
+
+**Tool collecting instead of skill building.** Don't memorize hundreds of commands. Learn why you're running something and what information you are trying to obtain.
+
+### How do I know I'm improving?
+
+When you get stuck, instead of immediately looking for a walkthrough, you start thinking: **"What can I test, research, or investigate next?"** That's real progress.
+
+### What's the reality of red teaming?
+
+It's not just exploiting machines. A lot of the work is **recon, enumeration, research, troubleshooting, scripting, documentation, and thinking carefully about what to do next.**
+
+### What's the best mindset?
+
+**Learn → Practice → Break → Investigate → Understand → Document → Repeat.**
+
+Practice only on systems you own or have explicit permission to test.
 
 
 ---
