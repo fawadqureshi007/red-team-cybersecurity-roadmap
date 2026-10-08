@@ -51,7 +51,6 @@ I follow an operator mindset:
 ---
 
 ## 🗂️ Table of Contents
-
 1. [👤 Who This Roadmap Is For](#-who-this-roadmap-is-for)
 2. [🚀 Foundation](#-foundation)
 3. [🔎 Fundamentals](#-fundamentals)
